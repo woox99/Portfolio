@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid black; */
+}
+.hide{
+    visibility: hidden;
+}
+
+/* NAV BAR */
+#nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(222, 221, 221);
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#box-button{
+    height: 20px;
+    width: 20px;
+    /* margin-top: 5px; */
+    margin-left: -5px;
+}
+.box-top, .box-bottom, .box-middle{
+    height: 33.2%;
+    display: flex;
+    justify-content: space-around;
+}
+#box-button span{
+    width: 20%;
+    height: 60%;
+    background-color: grey;
+}
+#nav img{
+    height: 30px;
+    border-radius: 50%;
+}
+#nav .name{
+    margin-left: -10px;
+}
+#nav .hide{
+    width: 600px;
+}
+#nav p{
+    height: 20px;
+}
+
+ /* BANNER */
+#banner{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    /* background-color: rgb(240, 240, 240); */
+}
+#banner img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+.quote {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+p.top, p.middle{
+    font-size: 25px;
+}
+.quote .middle{
+    width: 550px;
+    align-self: flex-end;
+}
+.quote .bottom{
+    width: 200px;
+    align-self: flex-end;
+}
