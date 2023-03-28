@@ -71,8 +71,12 @@ p.top, p.middle{
 .quote .middle{
     width: 550px;
     align-self: flex-end;
+    margin-top: -10px;
 }
 .quote .bottom{
     width: 200px;
     align-self: flex-end;
+}
+.quote span{
+    font-size: 35px;
 }
