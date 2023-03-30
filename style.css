@@ -7,7 +7,6 @@
     visibility: hidden;
 }
 
-
 /* NAV BAR */
 #nav{
     display: flex;
@@ -109,7 +108,7 @@ p.top, p.middle{
     margin-left: 450px;
 }
 #review2 {
-    margin-left: 500px;
+    margin-left: 400px;
 }
 #banner .name2{
     margin-left: 950px;
