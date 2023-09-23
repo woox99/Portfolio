@@ -1,59 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="intro.css">
+    <link rel="stylesheet" href="projects.css">
 </head>
+
 <body>
-    <div id="nav">
-        <div id="box-button">
-            <div class="box-top"><span></span><span></span><span></span></div>
-            <div class="box-middle"><span></span><span></span><span></span></div>
-            <div class="box-bottom"><span></span><span></span><span></span></div>
+    <!-- nav bar -->
+    <div class="nav flex">
+        <div class="links">
+            <a href="#projects-section" class="smooth-scroll">projects</a>
+            <a href="#toolbox-section" class="smooth-scroll">toolbox</a>
+            <a href="#contact-section" class="smooth-scroll">contact</a>
         </div>
-        <img src="assets/Garett.jpg" alt="head shot">
-        <p class="name">GARETT JANULEWICZ</p>
-        <p class="hide">EMPTY</p>
-        <P>ABOUT</P>
-        <P>TECHNOLOGY</P>
-        <P>CONTACT</P>
+        <button onclick="handleClick(this)">Resume</button>
     </div>
-    <div id="banner">
-        teest
-        <div class="top">
-            <img src="assets/Garett.jpg" alt="head shot">
-            <div class="quote">
-                <p class="top">"Don't worry about spelling my last name correctly,</p>
-                <p class="middle">I don't even know if I'm spelling it correctly..."</p>
-                <p class="bottom">-Garett Janulejasdfghklj</p>
-            </div>
-        </div>
-        <div class="bottom">
-            <div id="review">
-                <img src="assets/star.png" alt="star">
-                <img src="assets/star.png" alt="star">
-                <img src="assets/star.png" alt="star">
-                <img src="assets/star.png" alt="star">
-                <img src="assets/star.png" alt="star">
-                <p id="review-quote"><span>"</span>Such a nice boy.<span>"</span></p>
-                <img id="mom" src="assets/mom.jpg" alt="jeron's mom">
-            </div>
-            <p class="name">-Jeron's Mom</p>
-            <div id="review2">
-                <img src="assets/star.png" alt="star">
-                <img src="assets/greystar.png" alt="star">
-                <img src="assets/greystar.png" alt="star">
-                <img src="assets/greystar.png" alt="star">
-                <img src="assets/greystar.png" alt="star">
-                <p id="review-quote"><span>"</span>Stop asking for a review for your website.<span>"</span></p>
-                <img id="erik" src="assets/erik.jpg" alt="jeron's mom">
-            </div>
-            <p class="name2">-Erik</p>
+
+    <!-- slider -->
+    <div class="slider">
+        <div class="top" id="sliderTop"></div>
+        <a href=""><img src="assets/github2.png" alt=""></a>
+        <a href=""><img class="linkedin" src="assets/linkedin.png" alt=""></a>
+        <div class="bottom" id="sliderBottom"></div>
+    </div>
+    <h1 class="projectTitle sectionTitle" data-value="projects">projects</h1>
+
+    <!-- intro section -->
+    <div class="intro">
+        <img src="assets/eventhorizon.png" alt="">
+        <div class="title">
+            <p style="margin-left:1vw">A DevFolio by a Full-Stack Developer,</p>
+            <h1>GARETT</h1>
+            <h1 style="margin-top: -3vw;">JANULEWICZ</h1>
         </div>
     </div>
 
+    <div class="main-content">
+        <!-- projects section -->
+        <div class="projects" id="projects-section">
+            <p>test</p>
+        </div>
+
+        <!-- toolbox section -->
+        <div class="toolbox" id="toolbox-section">
+
+        </div>
+
+        <!-- contact section -->
+        <div class="contact" id="contact-section">
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

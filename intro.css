@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Righteous&family=Roboto+Mono:wght@700&display=swap');
+
+*{
+    /* border: 1px solid white; */
+    margin: 0;
+    padding: 0;
+}
+
+/* ########## INTRO SECTION ######### */
+
+.intro img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    height: 75vw;
+}
+.intro .title{
+    position: absolute;
+    top: 15vw;
+    left: 10vw;
+}
+.intro h1{
+    font-size: 7rem;
+    font-family: 'Open sans';
+    background: linear-gradient(180deg, #d6e2e7 60%, #030014);
+    /* background: url(assets/universe.jpg); */
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent;
+}

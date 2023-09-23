@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Righteous&family=Roboto+Mono:wght@700&display=swap');
+
+*{
+    /* border: 1px solid white; */
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+########## COLORS #########
+background #030014
+text #d6e2e7
+blue #00a4ed
+purple #c300ff
+
+FONTSIZE
+1rem
+7rem h1 name
+6rem h1 project title
+
+*/
+html{
+    font-size: 1.5vw;
+}
+body{
+    height: 600vh;
+    background-color: #030014;
+    color: #d6e2e7;
+    font-family: 'Righteous';
+    letter-spacing: 0.25vw;
+    /* box-sizing: border-box; */
+}
+a{
+    color: #d6e2e7;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+}
+.flex{
+    display: flex;
+}
+
+/*########## MAIN CONTENT#########*/
+.main-content{
+    margin-left: 15vw;
+    margin-right: 5vw;
+    padding-top: 105vh;
+    height: 100%;
+    border: 1px solid white;
+}
+
+/*########## NAV BAR #########*/
+.nav{
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 10vw;
+    background: linear-gradient(180deg, #030014 10%, #03001400);
+}
+.nav .links{
+    position: absolute;
+    top: 2.25vw;
+    left: 15vw;
+    display: flex;
+    gap: 6vw;
+}
+.nav button{
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    background-color: #03001400;
+    height: 4.5vw;
+    width: 11vw;
+    border-radius: 100px;
+    border: 1.5px solid #d6e2e7;
+    font-family: 'Righteous';
+    font-size: 1.5vw;
+    color: #d6e2e7;
+    letter-spacing: 2.5px;
+}
+.nav button:hover{
+    cursor: pointer;
+    color: white;
+    border: 1.5px solid white;
+}
+
+/* ########## SLIDER ######### */
+.slider{
+    position: fixed;
+    top: 6vw;
+    left: 3vw;
+    width: 3vw;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 1vw; */
+}
+.slider .top{
+    background: linear-gradient(180deg, #00a4ed, #c300ff);
+    width: 2px;
+    height: 2vw;
+    /* height: calc(100vh - 9vw); */
+}
+.slider .bottom{
+    background: linear-gradient(0deg, #00a4ed, #c300ff);
+    width: 2px;
+    /* height: 2vw; */
+    height: calc(100vh - 17vw);
+}
+.slider a{
+    height: 3vw;
+    width: 3vw;
+}
+.slider img{
+    width: 3vw;
+}
+.slider .linkedin{
+    transform: scale(0.8);
+}
+.sectionTitle {
+    position: fixed;
+    left: 4.5vw;
+    bottom: 3vw;
+    z-index: 99;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    height: calc(100vh - 9vw);
+    opacity: 25%;
+    font-size: 6rem;
+    letter-spacing: 1vw;
+}
+
