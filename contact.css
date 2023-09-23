@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Righteous&family=Roboto+Mono:wght@700&display=swap');
+*{
+    /* border: 1px solid white; */
+    margin: 0;
+    padding: 0;
+}
+
+/* ########## PROJECTS SECTION ######### */
+
+.contact{
+    padding-top: 6vw;
+    background-color: yellow;
+    height: 100vh;
+}

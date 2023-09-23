@@ -45,20 +45,25 @@ window.addEventListener("resize", () => {
     calculateSlider(document.documentElement.scrollHeight, window.innerWidth, window.innerHeight);
 })
 
-// ########## SECTION projectTitle TEXT EFFECT #########
+// ########## SECTION TITLE TEXT EFFECT #########
 const letters = "abcdefghijklmnopqrstuvwxyz";
-const introTitle = document.querySelector('.introTitle');
-const projectTitle = document.querySelector('.projectTitle');
-const toolboxTitle = document.querySelector('.toolboxTitle');
-const contactTitle = document.querySelector('.contactTitle');
+
+const titles = {
+    'intro': document.querySelector('.introTitle'),
+    'projects': document.querySelector('.projectTitle'),
+    'toolbox': document.querySelector('.toolboxTitle'),
+    'contact': document.querySelector('.contactTitle'),
+};
+
 let interval = null;
 
 // Function to handle the text effect
 function startTextEffect(title) {
-    introTitle.style.display = 'none';
-    projectTitle.style.display = 'none';
-    toolboxTitle.style.display = 'none';
-    contactTitle.style.display = 'none';
+    for (const key in titles) {
+        if (titles.hasOwnProperty(key)) {
+            titles[key].style.display = 'none';
+        }
+    }
     title.style.display = 'block';
     console.log('test');
     let iteration = 0;
@@ -85,30 +90,21 @@ function startTextEffect(title) {
     }, 20);
 }
 
-// Create an Intersection Observer to trigger the text effect when the "projects" container enters the viewport
-const projectsContainer = document.querySelector('.projects');
-const projectsObserver = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) {
-        startTextEffect(projectTitle);
-        // projectsObserver.unobserve(projectsContainer); // Stop observing once the effect starts
-    }
+// Create a single Intersection Observer to trigger the text effect for different sections
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            const section = entry.target.getAttribute("data-section");
+            const title = titles[section];
+            startTextEffect(title);
+        }
+    });
 }, {
-    threshold: 0.5, // You can adjust this threshold value as needed
+    threshold: 0.5, //adjust this threshold value as needed
 });
 
-// Start observing the "projects" container
-projectsObserver.observe(projectsContainer);
-
-// Create an Intersection Observer to trigger the text effect when the "projects" container enters the viewport
-const toolboxContainer = document.querySelector('.toolbox');
-const toolboxObserver = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) {
-        startTextEffect(toolboxTitle);
-        // observer.unobserve(toolboxContainer); // Stop observing once the effect starts
-    }
-}, {
-    threshold: 0.5, // You can adjust this threshold value as needed
+// Observe multiple sections
+const sectionsToObserve = document.querySelectorAll('[data-section]');
+sectionsToObserve.forEach((section) => {
+    observer.observe(section);
 });
-
-// Start observing the "projects" container
-toolboxObserver.observe(toolboxContainer);
