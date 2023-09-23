@@ -120,6 +120,7 @@ a:hover{
     transform: scale(0.8);
 }
 .sectionTitle {
+    display: none;
     position: fixed;
     left: 4.5vw;
     bottom: 3vw;

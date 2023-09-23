@@ -47,11 +47,19 @@ window.addEventListener("resize", () => {
 
 // ########## SECTION projectTitle TEXT EFFECT #########
 const letters = "abcdefghijklmnopqrstuvwxyz";
+const introTitle = document.querySelector('.introTitle');
 const projectTitle = document.querySelector('.projectTitle');
+const toolboxTitle = document.querySelector('.toolboxTitle');
+const contactTitle = document.querySelector('.contactTitle');
 let interval = null;
 
 // Function to handle the text effect
 function startTextEffect(title) {
+    introTitle.style.display = 'none';
+    projectTitle.style.display = 'none';
+    toolboxTitle.style.display = 'none';
+    contactTitle.style.display = 'none';
+    title.style.display = 'block';
     console.log('test');
     let iteration = 0;
 
@@ -79,14 +87,28 @@ function startTextEffect(title) {
 
 // Create an Intersection Observer to trigger the text effect when the "projects" container enters the viewport
 const projectsContainer = document.querySelector('.projects');
-const observer = new IntersectionObserver((entries) => {
+const projectsObserver = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
         startTextEffect(projectTitle);
-        observer.unobserve(projectsContainer); // Stop observing once the effect starts
+        // projectsObserver.unobserve(projectsContainer); // Stop observing once the effect starts
     }
 }, {
     threshold: 0.5, // You can adjust this threshold value as needed
 });
 
 // Start observing the "projects" container
-observer.observe(projectsContainer);
+projectsObserver.observe(projectsContainer);
+
+// Create an Intersection Observer to trigger the text effect when the "projects" container enters the viewport
+const toolboxContainer = document.querySelector('.toolbox');
+const toolboxObserver = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+        startTextEffect(toolboxTitle);
+        // observer.unobserve(toolboxContainer); // Stop observing once the effect starts
+    }
+}, {
+    threshold: 0.5, // You can adjust this threshold value as needed
+});
+
+// Start observing the "projects" container
+toolboxObserver.observe(toolboxContainer);
