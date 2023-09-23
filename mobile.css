@@ -6,8 +6,47 @@
     padding: 0;
 }
 
-@media screen and (max-width: 700px){
+/* ########## MOBILE ######### */
+@media (max-width: 600px){
     html{
-        font-size: 1.5vw;
+        font-size: 3vw;
+    }
+    body{
+        letter-spacing: 0.65vw;
+    }
+
+    /* Mobile nav bar and slider */
+    .nav .links {
+        gap: 16vw;
+    }
+    .nav button{
+        display: none;
+    }
+    .sectionTitle{
+        font-size: 3.5rem;
+    }
+
+    /* Mobile intro section */
+    .intro img{
+        height: 100vh !important;
+    }
+    .intro .title{
+        top: 15vh !important;
+    }
+    .intro h1{
+        font-size: 3rem !important;
+    }
+    .intro .tags{
+        display: block !important;
+        position: absolute;
+        font-size: 2rem;
+        top: 80vh;
+        left: 10vw;
+        opacity: 50%;
+    }
+    @media (max-height: 400px){
+        .intro .tags{
+            opacity: 0;
+        }
     }
 }
