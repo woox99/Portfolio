@@ -102,6 +102,16 @@ const observer = new IntersectionObserver((entries) => {
             const section = entry.target.getAttribute("data-section");
             const title = titles[section];
             startTextEffect(title);
+            // Fade in section on intersection
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+            }, 0)
+        }
+        else {
+            setTimeout(() => {
+                entry.target.style.opacity = '0';
+                titles['projects'].style.opacity = '0';
+            }, 0)
         }
     });
 }, {
@@ -118,9 +128,8 @@ sectionsToObserve.forEach((section) => {
 const intro = document.querySelector('.title');
 const introObserver = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
-        console.log('test')
         setTimeout(() => {
-            titles['projects'].style.opacity = '0';
+            //Fade in intro section
             intro.style.opacity = '1';
         }, 0)
     }

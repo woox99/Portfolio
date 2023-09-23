@@ -9,6 +9,8 @@
 
 .projects{
     padding-top: 6vw;
+    opacity: 0;
+    transition: opacity 0.5s ease;
     background-color: red;
-    height: 100vh;
+    height: 100vh; /*remove*/
 }

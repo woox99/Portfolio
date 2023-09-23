@@ -9,6 +9,8 @@
 
 .toolbox{
     padding-top: 6vw;
+    transition: opacity 0.5s ease;
     background-color: white;
-    height: 100vh;
+    height: 100vh; /*remove*/
+
 }
