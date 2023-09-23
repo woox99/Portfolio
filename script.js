@@ -59,13 +59,17 @@ let interval = null;
 
 // Function to handle the text effect
 function startTextEffect(title) {
+
+    // Make projects title visibile again
+    if(title.dataset.value == 'projects'){
+        title.style.opacity = '.2';
+    }
     for (const key in titles) {
         if (titles.hasOwnProperty(key)) {
             titles[key].style.display = 'none';
         }
     }
     title.style.display = 'block';
-    console.log('test');
     let iteration = 0;
 
     clearInterval(interval);
@@ -88,6 +92,7 @@ function startTextEffect(title) {
 
         iteration += 1 / 3;
     }, 20);
+
 }
 
 // Create a single Intersection Observer to trigger the text effect for different sections
@@ -100,7 +105,7 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, {
-    threshold: 0.5, //adjust this threshold value as needed
+    threshold: .5, // Observer will trigger when threshold is reached
 });
 
 // Observe multiple sections
@@ -108,3 +113,25 @@ const sectionsToObserve = document.querySelectorAll('[data-section]');
 sectionsToObserve.forEach((section) => {
     observer.observe(section);
 });
+
+// Make projects title fade out when last name is observed
+const intro = document.querySelector('.title');
+const introObserver = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+        console.log('test')
+        setTimeout(() => {
+            titles['projects'].style.opacity = '0';
+            intro.style.opacity = '1';
+        }, 0)
+    }
+    else{
+        setTimeout(() => {
+            intro.style.opacity = '0';
+        }, 0)
+    }
+}, {
+    threshold: .9, 
+});
+
+// Start observing the intro section
+introObserver.observe(intro);
