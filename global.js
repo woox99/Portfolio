@@ -145,11 +145,13 @@ sectionsToObserve.forEach((section) => {
 
 // Make projects title fade out when last name is observed
 const intro = document.querySelector('.title');
+const introTags = document.getElementById('introTags');
 const introObserver = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
         setTimeout(() => {
             //Fade in intro section
             intro.style.opacity = '1';
+            introTags.style.opacity = '0.5';
         }, 0)
         // Unhighlight tab
         tabs['projects'].style.color = '#d6e2e7'
@@ -157,7 +159,9 @@ const introObserver = new IntersectionObserver((entries) => {
     }
     else{
         setTimeout(() => {
+            //Fade out intro section
             intro.style.opacity = '0';
+            introTags.style.opacity = '0';
         }, 0)
     }
 }, {
@@ -166,3 +170,18 @@ const introObserver = new IntersectionObserver((entries) => {
 
 // Start observing the intro section
 introObserver.observe(intro);
+
+
+
+// ########## DELETE THIS ########
+// Select the HTML element you want to calculate the aspect ratio for
+const element = document.querySelector('.viewport');
+
+// Get the width and height of the element
+const elementWidth = element.offsetWidth;
+const elementHeight = element.offsetHeight;
+
+// Calculate the aspect ratio
+const aspectRatio = elementWidth / elementHeight;
+console.log("Aspect Ratio: " + aspectRatio);
+
