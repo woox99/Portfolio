@@ -78,12 +78,14 @@ function startTextEffect(title) {
         if(titles[key].dataset.value != 'intro'){
             // Unhighlight all tabs
             tabs[titles[key].dataset.value].style.color = '#d6e2e7';
+            tabs[titles[key].dataset.value].style.transform = 'scale(1.0)';
         }
     }
 
     // Highlight the section tab
     const highlightedTab = title.dataset.value;
     tabs[highlightedTab].style.color = '#ffffff';
+    tabs[highlightedTab].style.transform = 'scale(1.1)';
 
     // Display the section title
     title.style.display = 'block';
@@ -151,6 +153,7 @@ const introObserver = new IntersectionObserver((entries) => {
         }, 0)
         // Unhighlight tab
         tabs['projects'].style.color = '#d6e2e7'
+        tabs['projects'].style.transform = 'scale(1.0)'
     }
     else{
         setTimeout(() => {

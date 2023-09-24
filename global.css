@@ -58,7 +58,8 @@ a{
     transition: .2s;
 }
 a:hover{
-    color: white;
+    color: white !important;
+    transform: scale(1.1) !important;
 }
 .flex{
     display: flex;
@@ -82,39 +83,40 @@ a:hover{
 .nav{
     position: fixed;
     z-index: 99;
+    justify-content: flex-end;
+    padding-top: 2.25vw;
     width: 100%;
     height: 10vw;
     background: linear-gradient(180deg, #030014 10%, #03001400);
+    gap: 1vw;
 }
 .nav .links{
     position: absolute;
-    top: 2.25vw;
     left: 15vw;
     display: flex;
     gap: 6vw;
     opacity: 80%;
 }
-.nav .links a{
-    /* color: white; */
-}
 .nav button{
-    position: absolute;
-    top: 1vw;
-    right: 1vw;
     background-color: #03001400;
-    height: 4.5vw;
-    width: 11vw;
-    border-radius: 100px;
-    border: 1.5px solid #d6e2e7;
+    border: none;
     font-family: 'Righteous';
-    font-size: 1.5vw;
     color: #d6e2e7;
+    font-size: 1.0rem;
     letter-spacing: 2.5px;
+    transition: 0.2s;
+    margin-right: 2vw;
+    height: 2vw;
+}
+.nav img{
+    width: 2.75vw;
+    height: 2.75vw;
+    margin-top: -.25vw;
 }
 .nav button:hover{
     cursor: pointer;
     color: white;
-    border: 1.5px solid white;
+    transform: scale(1.1);
 }
 
 /* ########## SLIDER ######### */
