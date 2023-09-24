@@ -1,3 +1,4 @@
+
 // ########## SCROLL TO SECTION #########
 document.addEventListener("DOMContentLoaded", function () {
     // Add smooth scrolling behavior to links with the "smooth-scroll" class
@@ -55,20 +56,36 @@ const titles = {
     'contact': document.querySelector('.contactTitle'),
 };
 
+const tabs = {
+    'projects': document.getElementById('projects-tab'),
+    'toolbox': document.getElementById('toolbox-tab'),
+    'contact': document.getElementById('contact-tab'),
+}
+
 let interval = null;
 
 // Function to handle the text effect
 function startTextEffect(title) {
-
-    // Make projects title visibile again
+    
+    // Make section title visibile again (starts at 0 when page is loaded)
     if(title.dataset.value == 'projects'){
-        title.style.opacity = '.2';
+        title.style.opacity = '.3';
     }
     for (const key in titles) {
         if (titles.hasOwnProperty(key)) {
             titles[key].style.display = 'none';
         }
+        if(titles[key].dataset.value != 'intro'){
+            // Unhighlight all tabs
+            tabs[titles[key].dataset.value].style.color = '#d6e2e7';
+        }
     }
+
+    // Highlight the section tab
+    const highlightedTab = title.dataset.value;
+    tabs[highlightedTab].style.color = '#ffffff';
+
+    // Display the section title
     title.style.display = 'block';
     let iteration = 0;
 
@@ -132,6 +149,8 @@ const introObserver = new IntersectionObserver((entries) => {
             //Fade in intro section
             intro.style.opacity = '1';
         }, 0)
+        // Unhighlight tab
+        tabs['projects'].style.color = '#d6e2e7'
     }
     else{
         setTimeout(() => {

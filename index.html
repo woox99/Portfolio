@@ -13,15 +13,16 @@
     <link rel="stylesheet" href="toolbox.css">
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="macbook.css">
+    <link rel="stylesheet" href="shooting_star.css">
 </head>
 
 <body>
     <!-- nav bar -->
     <div class="nav flex">
         <div class="links">
-            <a href="#projects-section" class="smooth-scroll">projects</a>
-            <a href="#toolbox-section" class="smooth-scroll">toolbox</a>
-            <a href="#contact-section" class="smooth-scroll">contact</a>
+            <a href="#projects-section" class="smooth-scroll" id='projects-tab'>projects</a>
+            <a href="#toolbox-section" class="smooth-scroll" id='toolbox-tab'>toolbox</a>
+            <a href="#contact-section" class="smooth-scroll" id='contact-tab'>contact</a>
         </div>
         <button onclick="handleClick(this)">Resume</button>
     </div>
@@ -96,7 +97,9 @@
                         <div class="flex">
                             <p>TrixEx</p>
                             <img src="assets/glimmer.png">
-                            <div class="gradient"><p style="opacity: 0;">TrixEx</p></div>
+                            <div class="gradient">
+                                <p style="opacity: 0;">TrixEx</p>
+                            </div>
                         </div>
                     </div>
                     <div class="tags">
@@ -110,6 +113,7 @@
                     <div class="buttons">
                         <img src="assets/github.png" alt="">
                         <a href="">README</a>
+                        <p>OR</p>
                         <a class="site-btn" href="">VISIT SITE</a>
                     </div>
                 </div>

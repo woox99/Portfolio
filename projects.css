@@ -22,18 +22,18 @@
     position: absolute;
     z-index: -1;
     opacity: 80%;
-    margin-left: -12vw;
+    margin-left: -6vw;
     margin-top: -12vw;
 }
 .projects .background img{
-    width: 50vw;
-    height: 40vw;
+    width: 40vw;
+    height: 30vw;
 }
 .background .gradient{
     position: absolute;
     background-image: radial-gradient(#03001400, #030014 70%);
-    width: 50vw;
-    height: 40vw;
+    width: 40vw;
+    height: 30vw;
 }
 
 /* Project display */
@@ -73,6 +73,7 @@
     height: 5vw;
     border: 1px solid #d6e2e750;
     transition: background-color .5s ease;
+    transition: .2s;
 }
 .macbook-btn:hover, .iphone-btn:hover{
     cursor: pointer;
@@ -134,7 +135,7 @@
 }
 .info .tags p{
     border: 1px solid #d6e2e7;
-    border-radius: 3px;
+    border-radius: 5px;
     width: 9vw;
     height: 2.5vw;
     font-size: .9rem;
@@ -145,20 +146,32 @@
 .info .description{
     text-align: center;
     font-size: 0.8rem;
-    opacity: 90%;
+    opacity: 80%;
+    margin-top: 2vw;
 }
 .info .buttons{
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 0.8rem;
+    margin-top: 5vw;
+    gap: .6vw;
+}
+.github-btn{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
     gap: 1vw;
 }
 .info .buttons img{
     width: 5.5vw;
     filter: blur(2px);
-    opacity: .20;
+    opacity: .15;
+}
+.buttons p{
+    font-family: 'Open sans';
+    font-size: 0.5rem;
+    font-weight: 300;
 }
 .info .site-btn{
-
 }
