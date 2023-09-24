@@ -106,20 +106,59 @@
     -webkit-background-clip: text; 
     background-clip: text;
     color: transparent;
+    letter-spacing: 0vw;
 }
 .project-title img{
     position: absolute;
     width: 10.5vw;
     margin-top: -3.5vw;
-    margin-left: 2.5vw;
+    margin-left: 1.5vw;
 }
 .info .reflection{
     transform: scaleY(-1);
     opacity: 20%;
     margin-top: -1.5vw;
 }
+.info .reflection img{
+}
 .info .gradient{
     position: absolute;
     z-index: 1;
-    background: linear-gradient(180deg, #030014 30%, #03001400);
+    background: linear-gradient(180deg, #030014 20%, #03001400);
+}
+.info .tags{
+    display: flex;
+    opacity: 30%;
+    gap: .5vw;
+    margin-top: -1vw;
+}
+.info .tags p{
+    border: 1px solid #d6e2e7;
+    border-radius: 3px;
+    width: 9vw;
+    height: 2.5vw;
+    font-size: .9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info .description{
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 90%;
+}
+.info .buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+    gap: 1vw;
+}
+.info .buttons img{
+    width: 5.5vw;
+    filter: blur(2px);
+    opacity: .20;
+}
+.info .site-btn{
+
 }

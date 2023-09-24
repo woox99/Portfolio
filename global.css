@@ -14,11 +14,30 @@ blue #00a4ed
 purple #c300ff
 section title #d6e2e7 25%
 
+OPACITY
+.25 section title
+.25 button background
+.25 tags
+.50 button border
+.75 selected button border
+.80 description
+
 FONTSIZE
-1rem
-7rem h1 name
-6rem h1 section title
+0.8rem descrittion
+0.8rem project buttons
+0.9rem tags
+1.0rem nav buttons
 2.5rem project title
+6rem h1 section title
+7rem h1 name
+
+BORDER RADIUS
+3px
+
+BORDER WIDTH
+1px
+1.5px resume button
+
 
 */
 html{
@@ -29,7 +48,7 @@ body{
     background-color: #030014;
     color: #d6e2e7;
     font-family: 'Righteous';
-    letter-spacing: 0.25vw;
+    letter-spacing: 0.2vw;
     /* box-sizing: border-box; */
 }
 a{
