@@ -12,6 +12,10 @@
     opacity: 0;
     transition: opacity 0.5s ease;
 }
+.project{
+    display: flex;
+    /* min-height: calc(100vh - 10vw); */
+}
 
 /* Background image */
 .projects .background{
@@ -24,7 +28,7 @@
     width: 40vw;
     height: 30vw;
 }
-.projects .gradient{
+.background .gradient{
     position: absolute;
     background-image: radial-gradient(#03001400, #030014 70%);
     width: 40vw;
@@ -32,31 +36,66 @@
 }
 
 /* Project display */
-.projects{
-
-
-    min-height: 100svh;
-}
-.project{
-    display: flex;
-}
 .display{
     width: 45vw;
-    height: 100px;
 }
+.device{
+    display: flex;
+    justify-content: center;
+    height: 30vw;
+}
+.device .macbook{
+    transition: transform 0.5s ease;
+    opacity: 90%;
+}
+.device .iphone{
+    width: 70%;
+    transition: transform 0.5s ease;
+}
+.iphone img{
+    width: 100%;
+}
+.iphone .gradient{
+    position: absolute;
+    background: linear-gradient(0deg, #030014 20%, #03001400);
+    width: 100%;
+    height: 5vw;
+    margin-top: -5vw;
+}
+.display .buttons{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+.macbook-btn, .iphone-btn{
+    width: 5vw;
+    height: 5vw;
+    border: 1px solid #d6e2e750;
+    transition: background-color .5s ease;
+}
+.macbook-btn:hover, .iphone-btn:hover{
+    cursor: pointer;
+    border: 1px solid #d6e2e775 !important;
+}
+.macbook-btn{
+    border-radius: 3px 0px 0px 3px;
+    background-color: #d6e2e725;
+    border: 1px solid #d6e2e775;
+}
+.iphone-btn{
+    border-radius: 0px 3px 3px 0px;
+}
+.display .buttons img{
+    width: 4vw;
+    height: 4vw;
+    opacity: 80%;
+}
+
+/* Description */
 .description{
     width: 35vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.device{
-    display: flex;
-    justify-content: center;
-}
-.device .macbook{
-    opacity: 80%;
-}
-.device .iphone{
-    width: 70%;
 }

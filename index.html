@@ -63,17 +63,27 @@
                 </div>
                 <div class="display">
                     <div class="device">
-                        <!-- <div class="macbook">
+                        <div class="macbook">
                             <div class="screen">
                                 <div class="viewport">
                                 </div>
                             </div>
                             <div class="base"></div>
                             <div class="notch"></div>
-                        </div> -->
-                        <img class="iphone" src="assets/iphone12.png" alt="">
+                        </div>
+                        <div class="iphone" style="display: none;">
+                            <img src="assets/iphone12.png" alt="">
+                            <div class="gradient"></div>
+                        </div>
                     </div>
-                    <div class="buttons"></div>
+                    <div class="buttons">
+                        <div class="macbook-btn center" onclick="showMacbook()">
+                            <img src="assets/macbookbtn.png" alt="">
+                        </div>
+                        <div class="iphone-btn center" onclick="showIphone()">
+                            <img src="assets/iphonebtn.png" alt="">
+                        </div>
+                    </div>
                 </div>
                 <div class="description">
                     <h1>TrixEx</h1>
@@ -93,7 +103,8 @@
 
     </div>
 
-    <script src="script.js"></script>
+    <script src="global.js"></script>
+    <script src="device.js"></script>
 </body>
 
 </html>

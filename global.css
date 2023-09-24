@@ -12,6 +12,7 @@ background #030014
 text #d6e2e7
 blue #00a4ed
 purple #c300ff
+section title #d6e2e7 25%
 
 FONTSIZE
 1rem
@@ -39,6 +40,12 @@ a:hover{
 }
 .flex{
     display: flex;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /*########## MAIN CONTENT#########*/
