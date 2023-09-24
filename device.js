@@ -11,7 +11,7 @@ const showIphone = () => {
 
     setTimeout(() => {
         iphone.style.transform = 'scale(1.0)';
-    }, 100);
+    }, 0);
 
     iphoneBtn.style.backgroundColor = '#d6e2e725';
     iphoneBtn.style.border = '1px solid #d6e2e775';
@@ -27,7 +27,7 @@ const showMacbook = () => {
 
     setTimeout(() => {
         macbook.style.transform = 'scale(1.0)';
-    }, 100);
+    }, 0);
 
     macbookBtn.style.backgroundColor = '#d6e2e725';
     macbookBtn.style.border = '1px solid #d6e2e775';

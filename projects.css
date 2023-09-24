@@ -22,17 +22,18 @@
     position: absolute;
     z-index: -1;
     opacity: 80%;
-    margin-left: -3vw;
+    margin-left: -12vw;
+    margin-top: -12vw;
 }
 .projects .background img{
-    width: 40vw;
-    height: 30vw;
+    width: 50vw;
+    height: 40vw;
 }
 .background .gradient{
     position: absolute;
     background-image: radial-gradient(#03001400, #030014 70%);
-    width: 40vw;
-    height: 30vw;
+    width: 50vw;
+    height: 40vw;
 }
 
 /* Project display */
@@ -45,12 +46,11 @@
     height: 30vw;
 }
 .device .macbook{
-    transition: transform 0.5s ease;
-    opacity: 90%;
+    transition: transform 0.3s ease;
 }
 .device .iphone{
     width: 70%;
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease;
 }
 .iphone img{
     width: 100%;
@@ -93,9 +93,33 @@
 }
 
 /* Description */
-.description{
+.info{
     width: 35vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.project-title{
+    font-family: 'Open sans';
+    font-size: 2.5rem;
+    background: linear-gradient(180deg, #d6e2e7 60%, #00a4ed);
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent;
+}
+.project-title img{
+    position: absolute;
+    width: 10.5vw;
+    margin-top: -3.5vw;
+    margin-left: 2.5vw;
+}
+.info .reflection{
+    transform: scaleY(-1);
+    opacity: 20%;
+    margin-top: -1.5vw;
+}
+.info .gradient{
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(180deg, #030014 30%, #03001400);
 }
