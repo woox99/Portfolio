@@ -8,9 +8,55 @@
 /* ########## PROJECTS SECTION ######### */
 
 .projects{
-    padding-top: 6vw;
+    padding-top: 10vw;
     opacity: 0;
     transition: opacity 0.5s ease;
-    background-color: red;
-    height: 100vh; remove
+}
+
+/* Background image */
+.projects .background{
+    position: absolute;
+    z-index: -1;
+    opacity: 80%;
+    margin-left: -3vw;
+}
+.projects .background img{
+    width: 40vw;
+    height: 30vw;
+}
+.projects .gradient{
+    position: absolute;
+    background-image: radial-gradient(#03001400, #030014 70%);
+    width: 40vw;
+    height: 30vw;
+}
+
+/* Project display */
+.projects{
+
+
+    min-height: 100svh;
+}
+.project{
+    display: flex;
+}
+.display{
+    width: 45vw;
+    height: 100px;
+}
+.description{
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.device{
+    display: flex;
+    justify-content: center;
+}
+.device .macbook{
+    opacity: 80%;
+}
+.device .iphone{
+    width: 70%;
 }
