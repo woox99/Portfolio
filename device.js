@@ -1,37 +1,39 @@
 let test = 'test';
-const iphone = document.querySelector('.iphone');
-const macbook = document.querySelector('.macbook');
-const iphoneBtn = document.querySelector('.iphone-btn');
-const macbookBtn = document.querySelector('.macbook-btn');
+const iphone = document.querySelectorAll('.iphone');
+const macbook = document.querySelectorAll('.macbook');
+const iphoneBtn = document.querySelectorAll('.iphone-btn');
+const macbookBtn = document.querySelectorAll('.macbook-btn');
 
-const showIphone = () => {
-    macbook.style.display = 'none';
-    iphone.style.display = 'block';
-    iphone.style.transform = 'scale(1.5)';
+// Takes project number for argument
+const showIphone = (projectNum) => {
+    // console.log(iphone)
+    macbook[projectNum - 1].style.display = 'none';
+    iphone[projectNum - 1].style.display = 'block';
+    iphone[projectNum - 1].style.transform = 'scale(1.5)';
 
     setTimeout(() => {
-        iphone.style.transform = 'scale(1.0)';
+        iphone[projectNum - 1].style.transform = 'scale(1.0)';
     }, 0);
 
-    iphoneBtn.style.backgroundColor = '#d6e2e725';
-    iphoneBtn.style.border = '1px solid #d6e2e775';
+    iphoneBtn[projectNum - 1].style.backgroundColor = '#d6e2e725';
+    iphoneBtn[projectNum - 1].style.border = '1px solid #d6e2e775';
     
-    macbookBtn.style.backgroundColor = '#d6e2e700';
-    macbookBtn.style.border = '1px solid #d6e2e750';
+    macbookBtn[projectNum - 1].style.backgroundColor = '#d6e2e700';
+    macbookBtn[projectNum - 1].style.border = '1px solid #d6e2e750';
 }
 
-const showMacbook = () => {
-    iphone.style.display = 'none';
-    macbook.style.display = 'block';
-    macbook.style.transform = 'scale(1.5)';
+const showMacbook = (projectNum) => {
+    iphone[projectNum - 1].style.display = 'none';
+    macbook[projectNum - 1].style.display = 'block';
+    macbook[projectNum - 1].style.transform = 'scale(1.5)';
 
     setTimeout(() => {
-        macbook.style.transform = 'scale(1.0)';
+        macbook[projectNum - 1].style.transform = 'scale(1.0)';
     }, 0);
 
-    macbookBtn.style.backgroundColor = '#d6e2e725';
-    macbookBtn.style.border = '1px solid #d6e2e775';
+    macbookBtn[projectNum - 1].style.backgroundColor = '#d6e2e725';
+    macbookBtn[projectNum - 1].style.border = '1px solid #d6e2e775';
     
-    iphoneBtn.style.backgroundColor = '#d6e2e700';
-    iphoneBtn.style.border = '1px solid #d6e2e750';
+    iphoneBtn[projectNum - 1].style.backgroundColor = '#d6e2e700';
+    iphoneBtn[projectNum - 1].style.border = '1px solid #d6e2e750';
 }

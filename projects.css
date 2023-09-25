@@ -8,31 +8,13 @@
 /* ########## PROJECTS SECTION ######### */
 
 .projects{
+    /* background-color: red; */
     padding-top: 10vw;
     opacity: 0;
     transition: opacity 0.5s ease;
 }
 .project{
     display: flex;
-}
-
-/* Background image */
-.project .background{
-    position: absolute;
-    z-index: -1;
-    opacity: 80%;
-    margin-left: -6vw;
-    margin-top: -12vw;
-}
-.project .background img{
-    width: 40vw;
-    height: 30vw;
-}
-.project .background .gradient{
-    position: absolute;
-    background-image: radial-gradient(#03001400, #030014 70%);
-    width: 40vw;
-    height: 30vw;
 }
 
 /* Display */
@@ -52,9 +34,9 @@
 .device .iphone{
     width: 70%;
     transition: transform 0.3s ease;
-    /* display: flex;
-    justify-content: center; */
-    /* background-color: red; */
+}
+.device a:hover{
+    transform: none !important;
 }
 .iphone .blackout{
     position: absolute;
@@ -66,19 +48,17 @@
     width: 27vw;
     height: 2.5vw;
 }
-.iphone .trixex{
+.iphone .project-sceenshot{
     position: absolute;
     z-index: -1;
     width: 100%;
     margin-top: 1vw;
     transform: scale(0.83);
 }
-.iphone .screen-glare{
-
-}
 .iphone-img{
     width: 100%;
 }
+/* Glare on iphone */
 .iphone:after {
     background: radial-gradient(circle at right bottom, transparent 75%, rgba(255, 255, 255, 0.35) 80%, transparent);
     bottom: 0;
@@ -93,8 +73,8 @@
     position: absolute;
     background: linear-gradient(0deg, #030014 20%, #03001400);
     width: 100%;
-    height: 5vw;
-    margin-top: -5vw;
+    height: 10vw;
+    margin-top: -10vw;
 }
 .display .buttons{
     display: flex;
@@ -165,7 +145,15 @@
     display: flex;
     opacity: 30%;
     gap: .5vw;
+    width: 28.35vw;
+}
+.info .tags-row1{
     margin-top: -1vw;
+    justify-content: flex-start;
+}
+.info .tags-row2{
+    margin-top: 0.5vw;
+    justify-content: flex-end;
 }
 .info .tags p{
     border: 1px solid #d6e2e7;
@@ -207,3 +195,46 @@
     font-size: 0.5rem;
     font-weight: 300;
 }
+
+/* PROJECT-ODD*/
+.project-odd .background{
+    position: absolute;
+    z-index: -1;
+    opacity: 80%;
+    margin-left: -6vw;
+    margin-top: -12vw;
+}
+.project-odd .background img{
+    width: 40vw;
+    height: 30vw;
+}
+.project-odd .background .gradient{
+    position: absolute;
+    background-image: radial-gradient(#03001400, #030014 70%);
+    width: 40vw;
+    height: 30vw;
+}
+
+/* PROJECT-EVEN */
+.project-even .background{
+    position: absolute;
+    z-index: -1;
+    opacity: 80%;
+    margin-left: 40vw;
+    margin-top: -12vw;
+}
+.project-even .background img{
+    width: 40vw;
+    height: 30vw;
+}
+.project-even .background .gradient{
+    position: absolute;
+    background-image: radial-gradient(#03001400, #030014 70%);
+    width: 40vw;
+    height: 30vw;
+}
+.project-even{
+    margin-top: 15vw;
+    margin-bottom: 15vw;
+}
+

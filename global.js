@@ -66,16 +66,16 @@ let interval = null;
 
 // Function to handle the text effect
 function startTextEffect(title) {
-    
+
     // Make section title visibile again (starts at 0 when page is loaded)
-    if(title.dataset.value == 'projects'){
+    if (title.dataset.value == 'projects') {
         title.style.opacity = '.3';
     }
     for (const key in titles) {
         if (titles.hasOwnProperty(key)) {
             titles[key].style.display = 'none';
         }
-        if(titles[key].dataset.value != 'intro'){
+        if (titles[key].dataset.value != 'intro') {
             // Unhighlight all tabs
             tabs[titles[key].dataset.value].style.color = '#d6e2e7';
             tabs[titles[key].dataset.value].style.transform = 'scale(1.0)';
@@ -129,12 +129,11 @@ const observer = new IntersectionObserver((entries) => {
         else {
             setTimeout(() => {
                 entry.target.style.opacity = '0';
-                titles['projects'].style.opacity = '0';
             }, 0)
         }
     });
 }, {
-    threshold: .5, // Observer will trigger when threshold is reached
+    threshold: .10, // Observer will trigger when threshold is reached
 });
 
 // Observe multiple sections
@@ -152,12 +151,14 @@ const introObserver = new IntersectionObserver((entries) => {
             //Fade in intro section
             intro.style.opacity = '1';
             introTags.style.opacity = '0.5';
+            titles['projects'].style.opacity = '0';
+
         }, 0)
         // Unhighlight tab
         tabs['projects'].style.color = '#d6e2e7'
         tabs['projects'].style.transform = 'scale(1.0)'
     }
-    else{
+    else {
         setTimeout(() => {
             //Fade out intro section
             intro.style.opacity = '0';
@@ -165,7 +166,7 @@ const introObserver = new IntersectionObserver((entries) => {
         }, 0)
     }
 }, {
-    threshold: .9, 
+    threshold: .9,
 });
 
 // Start observing the intro section

@@ -51,6 +51,7 @@ body{
     color: #d6e2e7;
     font-family: 'Righteous';
     letter-spacing: 0.2vw;
+    overflow-x: hidden;
     /* box-sizing: border-box; */
 }
 a{
