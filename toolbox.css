@@ -10,7 +10,70 @@
 .toolbox{
     padding-top: 10vw;
     transition: opacity 0.5s ease;
-    background-color: white;
+    /* background-color: white; */
     height: 100vh; /*remove*/
+}
 
+.toolbox .row1, .toolbox .row2{
+    display: flex;
+    align-items: center;
+    gap: 6vw;
+    /* overflow: hidden; */
+}
+
+.toolbox .row1{
+    /* background-color: yellow; */
+    justify-content: flex-start;
+}
+
+.toolbox .row2{
+    /* background-color: white; */
+    justify-content: flex-end;
+    padding-right: 4vw;
+    margin-top: 2vw;
+}
+
+.toolbox .row1 img,
+.toolbox .row2 img{
+opacity: 0.3;
+width: 12vw;
+}
+.toolbox .python{
+    width: 13vw !important;
+}
+.toolbox .node{
+    margin-top: 1vw;
+    opacity: 1.0 !important;
+}
+.toolbox .mysql{
+    margin-top: -3.5vw;
+}
+.toolbox .spring{
+}
+.toolbox .flask{
+}
+.toolbox .react{
+}
+.toolbox .mongo{
+    width: 15vw !important;
+}
+.toolbox .mui{
+    opacity: 1.0 !important;
+}
+
+.node-light{
+    position: absolute;
+    z-index: -1;
+    left: 23vw;
+    width: 35vw;
+    height: 35vw;
+    background-image: radial-gradient(#4db84325, #4db84300 70%);
+}
+.mui-light{
+    position: absolute;
+    z-index: -1;
+    left: 68vw;
+    width: 30vw;
+    height: 30vw;
+    background-image: radial-gradient(#00a4ed20, #00a4ed00 70%);
 }

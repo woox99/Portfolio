@@ -133,7 +133,7 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, {
-    threshold: .10, // Observer will trigger when threshold is reached
+    threshold: .2, // Observer will trigger when threshold is reached
 });
 
 // Observe multiple sections
@@ -174,15 +174,5 @@ introObserver.observe(intro);
 
 
 
-// ########## DELETE THIS ########
-// Select the HTML element you want to calculate the aspect ratio for
-const element = document.querySelector('.viewport');
 
-// Get the width and height of the element
-const elementWidth = element.offsetWidth;
-const elementHeight = element.offsetHeight;
-
-// Calculate the aspect ratio
-const aspectRatio = elementWidth / elementHeight;
-console.log("Aspect Ratio: " + aspectRatio);
 
