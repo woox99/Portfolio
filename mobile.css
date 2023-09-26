@@ -1,53 +1,191 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Righteous&family=Roboto+Mono:wght@700&display=swap');
 
-*{
+* {
     /* border: 1px solid white; */
     margin: 0;
     padding: 0;
 }
 
 /* ########## MOBILE ######### */
-@media (max-width: 600px){
-    html{
-        font-size: 3vw;
+@media (max-width: 600px) {
+    html {
+        font-size: 4vw;
     }
-    body{
+
+    body {
         letter-spacing: 0.65vw;
     }
 
-    /* Mobile nav bar and slider */
-    .nav .links {
-        gap: 16vw;
+    /* ########## BAR AND SLIDER ######### */
+    .nav {
+        height: 18vw;
+        background: linear-gradient(180deg, #030014 30%, #03001400);
     }
-    .nav button{
+
+    .nav .links {
+        gap: 10vw;
+        margin-top: 2vw;
+    }
+
+    .nav button,
+    .nav img {
         display: none;
     }
-    .sectionTitle{
+
+    .sectionTitle {
         font-size: 3.5rem;
     }
 
-    /* Mobile intro section */
-    .intro img{
+    .slider .github,
+    .slider .linkedin {
+        display: none;
+    }
+
+    /* ########## INTRO ######### */
+    .intro img {
         height: 100vh !important;
     }
-    .intro .title{
+
+    .intro .title {
         top: 15vh !important;
     }
-    .intro h1{
-        font-size: 3rem !important;
+
+    .intro .title p {
+        font-size: .75rem;
     }
-    .intro .tags{
+
+    .intro h1 {
+        font-size: 2.25rem !important;
+    }
+
+    .intro .tags {
         display: block !important;
         position: absolute;
-        font-size: 2rem;
-        top: 80vh;
+        font-size: 1.25rem;
+        top: 75vh;
         left: 10vw;
         opacity: 50%;
         transition: 0.5s;
     }
-    @media (max-height: 400px){
-        .intro .tags{
+
+    /* When screen width AND height is small */
+    @media (max-height: 400px) {
+        .intro .tags {
             opacity: 0;
         }
+    }
+
+    /* ########## PROJECTS ######### */
+    .project {
+        padding-top: 30vw !important;
+        padding-bottom: 27vw !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .project-title-mobile {
+        display: block !important;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5vw;
+    }
+
+    .project-title {
+        margin-bottom: -4vw;
+    }
+
+    .info .project-title {
+        display: none;
+    }
+
+    .project-title img {
+        width: 20vw !important;
+        width: calc(10.5vw * 2.67) !important;
+        margin-left: 4vw !important;
+        margin-top: -9.5vw !important;
+    }
+
+    .project .background {
+        display: none;
+    }
+
+    .background-mobile {
+        display: block !important;
+        z-index: -1;
+        margin-top: 30vw !important;
+        margin-left: -0vw !important;
+    }
+
+    .background-mobile {
+        transform: scale(2);
+    }
+
+    .background-mobile {
+        transform: scale(2);
+        z-index: 1;
+    }
+
+    .project .display {
+        width: 65vw;
+    }
+
+    .display .buttons {
+        margin-top: 16vw;
+    }
+
+    .macbook-btn,
+    .iphone-btn {
+        width: 12.5vw !important;
+        height: 12.5vw !important;
+    }
+
+    .display .buttons img {
+        width: 10vw !important;
+        height: 10vw !important;
+    }
+
+    .info {
+        width: 65vw !important;
+    }
+
+    .info .tags {
+        width: 100% !important;
+        margin-top: 5vw;
+    }
+
+    .info .tags p {
+        width: 22vw !important;
+        height: 6vw !important;
+    }
+
+    .info .description {
+        margin-top: 4vw !important;
+    }
+
+    .info .buttons {
+        margin-top: 15vw !important;
+        font-size: 1.5rem;
+        gap: 2vw !important;
+    }
+
+    .info .buttons img {
+        width: 15vw !important;
+        opacity: 0.3 !important;
+    }
+
+    .buttons p {
+        font: .45rem;
+    }
+
+
+
+    /* PROJECT-EVEN */
+    .project-even {
+        flex-wrap: wrap-reverse;
+    }
+    .project-even .display .buttons{
+        margin-bottom: 5vw;
     }
 }

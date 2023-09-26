@@ -46,7 +46,6 @@ html{
     font-size: 1.5vw;
 }
 body{
-    height: 600vh;
     background-color: #030014;
     color: #d6e2e7;
     font-family: 'Righteous';
@@ -160,7 +159,7 @@ a:hover{
     position: fixed;
     left: 4.5vw;
     bottom: 3vw;
-    z-index: 99;
+    z-index: 1;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     height: calc(100vh - 9vw);

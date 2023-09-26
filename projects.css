@@ -9,11 +9,12 @@
 
 .projects{
     /* background-color: red; */
-    padding-top: 10vw;
     opacity: 0;
     transition: opacity 0.5s ease;
 }
 .project{
+    padding-top: 10vw;
+    padding-bottom: 5vw;
     display: flex;
 }
 
@@ -129,14 +130,12 @@
     margin-top: -3.5vw;
     margin-left: 1.5vw;
 }
-.info .reflection{
+.reflection{
     transform: scaleY(-1);
     opacity: 20%;
     margin-top: -1.5vw;
 }
-.info .reflection img{
-}
-.info .gradient{
+.project-title .gradient{
     position: absolute;
     z-index: 1;
     background: linear-gradient(180deg, #030014 20%, #03001400);
@@ -146,6 +145,7 @@
     opacity: 30%;
     gap: .5vw;
     width: 28.35vw;
+    justify-content: center;
 }
 .info .tags-row1{
     margin-top: -1vw;
@@ -157,7 +157,7 @@
 }
 .info .tags p{
     border: 1px solid #d6e2e7;
-    border-radius: 5px;
+    border-radius: 3px;
     width: 9vw;
     height: 2.5vw;
     font-size: .9rem;
@@ -179,7 +179,7 @@
     margin-top: 5vw;
     gap: .6vw;
 }
-.github-btn{
+.info .buttons .github-btn{
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -195,46 +195,34 @@
     font-size: 0.5rem;
     font-weight: 300;
 }
-
-/* PROJECT-ODD*/
-.project-odd .background{
+.project .background{
     position: absolute;
     z-index: -1;
     opacity: 80%;
+}
+.project .background .gradient{
+    position: absolute;
+    background-image: radial-gradient(#03001400, #030014 70%);
+}
+/* PROJECT-ODD*/
+.project-odd .background{
     margin-left: -6vw;
     margin-top: -12vw;
 }
-.project-odd .background img{
-    width: 40vw;
-    height: 30vw;
-}
+.project-odd .background img,
 .project-odd .background .gradient{
-    position: absolute;
-    background-image: radial-gradient(#03001400, #030014 70%);
     width: 40vw;
     height: 30vw;
 }
 
 /* PROJECT-EVEN */
 .project-even .background{
-    position: absolute;
-    z-index: -1;
-    opacity: 80%;
     margin-left: 40vw;
     margin-top: -12vw;
 }
-.project-even .background img{
-    width: 40vw;
-    height: 30vw;
-}
+.project-even .background img,
 .project-even .background .gradient{
-    position: absolute;
-    background-image: radial-gradient(#03001400, #030014 70%);
     width: 40vw;
     height: 30vw;
-}
-.project-even{
-    margin-top: 15vw;
-    margin-bottom: 15vw;
 }
 

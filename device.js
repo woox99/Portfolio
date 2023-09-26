@@ -9,7 +9,7 @@ const showIphone = (projectNum) => {
     // console.log(iphone)
     macbook[projectNum - 1].style.display = 'none';
     iphone[projectNum - 1].style.display = 'block';
-    iphone[projectNum - 1].style.transform = 'scale(1.5)';
+    iphone[projectNum - 1].style.transform = 'scale(1.25)';
 
     setTimeout(() => {
         iphone[projectNum - 1].style.transform = 'scale(1.0)';
@@ -25,7 +25,7 @@ const showIphone = (projectNum) => {
 const showMacbook = (projectNum) => {
     iphone[projectNum - 1].style.display = 'none';
     macbook[projectNum - 1].style.display = 'block';
-    macbook[projectNum - 1].style.transform = 'scale(1.5)';
+    macbook[projectNum - 1].style.transform = 'scale(1.25)';
 
     setTimeout(() => {
         macbook[projectNum - 1].style.transform = 'scale(1.0)';
