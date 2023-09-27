@@ -173,6 +173,12 @@ const introObserver = new IntersectionObserver((entries) => {
 introObserver.observe(intro);
 
 
+const topRow = document.getElementById('topRow')
+const bottomRow = document.getElementById('bottomRow')
+console.log(topRow.offsetHeight)
+console.log(bottomRow.offsetHeight)
+
+
 
 
 

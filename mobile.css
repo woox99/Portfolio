@@ -233,7 +233,7 @@
         /* background-color: red; */
     }
     .toolbox .row2{
-        margin-top: -5vw !important;
+        margin-top: -12vw !important;
     }
 
     .toolbox .top-row {
@@ -245,6 +245,9 @@
         transform: scale(1.75);
         transform-origin: left;
         margin-top: 3vw;
+    }
+    .toolbox .row2 img{
+        margin-top: 3.4vw;
     }
     .toolbox .top-row img{
         transform-origin: right;
@@ -263,5 +266,10 @@
     }
     .toolbox .react{
         margin-left: 12vw;
+    }
+
+    .toolbox .row1,
+    .toolbox .row2{
+        /* background-color: red; */
     }
 }
