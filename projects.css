@@ -8,7 +8,6 @@
 /* ########## PROJECTS SECTION ######### */
 
 .projects{
-    /* background-color: red; */
     opacity: 0;
     transition: opacity 0.5s ease;
 }
