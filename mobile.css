@@ -179,13 +179,53 @@
         font: .45rem;
     }
 
-
-
     /* PROJECT-EVEN */
     .project-even {
         flex-wrap: wrap-reverse;
     }
-    .project-even .display .buttons{
+
+    .project-even .display .buttons {
         margin-bottom: 5vw;
+    }
+
+    /* ########## TOOLBOX ######### */
+    .toolbox {
+        padding-top: 20vw !important;
+        padding-left: 5vw;
+        min-height: 100vh;
+        /* background-color: wheat; */
+    }
+
+    .toolbox .cards {
+        flex-wrap: wrap;
+        /* background-color: wheat; */
+    }
+
+    .toolbox .card {
+        width: 33vw !important;
+        height: 50vw !important;
+    }
+
+    .toolbox .tools {
+        display: none;
+    }
+
+    .toolbox .card-3,
+    .toolbox .card-4 {
+        margin-top: 50vw;
+    }
+
+    .toolbox .card-3,
+    .toolbox .card-4 {
+        transform: none !important;
+    }
+
+    .toolbox .card-3 .content-wrapper,
+    .toolbox .card-4 .content-wrapper {
+        transform: none !important;
+    }
+
+    .cards :nth-child(3){
+        order:4;
     }
 }
