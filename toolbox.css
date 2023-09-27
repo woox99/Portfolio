@@ -46,19 +46,25 @@
 }
 
 .toolbox .mysql {
+    width: 11vw !important;
     margin-top: -3.5vw;
 }
 
 .toolbox .spring {}
 
-.toolbox .flask {}
+.toolbox .flask {
+    width: 11vw !important;
+}
 
-.toolbox .react {}
+.toolbox .react {
+    width: 14vw !important;
+}
 
 .toolbox .mongo {
     width: 15vw !important;
     margin-left: -2vw;
     margin-right: -2vw;
+    margin-top: -0.5vw;
 }
 
 .toolbox .mui {

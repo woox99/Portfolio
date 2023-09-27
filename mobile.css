@@ -189,6 +189,14 @@
     }
 
     /* ########## TOOLBOX ######### */
+    .toolbox .desktop {
+        display: none;
+    }
+
+    .toolbox .mobile {
+        display: block !important;
+    }
+
     .toolbox {
         padding-top: 20vw !important;
         padding-left: 5vw;
@@ -197,57 +205,63 @@
     }
 
     .toolbox .cards {
-        flex-wrap: wrap;
         margin-top: 0 !important;
-        /* background-color: wheat; */
     }
-    
+
     .toolbox .card {
         width: 33vw !important;
         height: 50vw !important;
     }
-    
-    .toolbox .tools {
-        /* display: none; */
-        /* transform: scale(1.5); */
-        /* background-color: red; */
-    }
-    .toolbox .row1{
 
-    }
-    .toolbox .row2{
-        display: none !important;
-        margin-top: 0 !important;
-        /* position: absolute; */
-        /* background-color: red; */
-    }
-    .toolbox .row2-mobile{
-        display: block !important;
-        width: 73vw !important;
-        /* background-color: red; */
-    }
-    .cards :nth-child(4){
-        order:5;
+    .toolbox .card-1,
+    .toolbox .card-4 {
+        margin-top: 15vw;
     }
 
-    .toolbox .card-1{
-        margin-top: 10vw;
-    }
-    .toolbox .card-3 {
-        /* margin-top: 30vw; */
-    }
-    .toolbox .card-4{
-        margin-top: 10vw;
-    }
 
     .toolbox .card-3,
-    .toolbox .card-4 {
-        transform: none !important;
-    }
-
+    .toolbox .card-4,
     .toolbox .card-3 .content-wrapper,
     .toolbox .card-4 .content-wrapper {
         transform: none !important;
     }
 
+    .toolbox .row1,
+    .toolbox .row2 {
+        margin: 0 !important;
+        display: block !important;
+        /* background-color: red; */
+    }
+    .toolbox .row2{
+        margin-top: -5vw !important;
+    }
+
+    .toolbox .top-row {
+        text-align: end;
+    }
+
+    .toolbox .row1 img,
+    .toolbox .row2 img{
+        transform: scale(1.75);
+        transform-origin: left;
+        margin-top: 3vw;
+    }
+    .toolbox .top-row img{
+        transform-origin: right;
+    }
+    .toolbox .mysql{
+        margin-right: 18vw;
+    }
+    .toolbox .node{
+        margin-left: 15vw;
+    }
+    /* .toolbox .python{
+        margin-top: 3vw !important;
+    } */
+    .toolbox .mongo{
+        margin-right: 14vw !important;
+    }
+    .toolbox .react{
+        margin-left: 12vw;
+    }
 }
