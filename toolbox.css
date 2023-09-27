@@ -124,20 +124,33 @@
     transform: scaleX(-1);
 }
 .toolbox .content-wrapper {
+    position: relative;
     background-image: linear-gradient(0deg, #03001400, #030014);
     height: 100%;
     border-radius: 4px;
     text-align: center;
 }
-.content-wrapper:after {
-    background: radial-gradient(circle at right bottom, transparent 75%, rgba(255, 255, 255, 0.35) 80%, transparent);
-    bottom: 0;
+.img-gradient:after{
+    position: absolute;
     content: "";
     z-index: 1;
-    left: 0;
     top: 0;
-    position: absolute;
+    bottom: 0;
+    left: 0;
     right: 0;
+    background-image: linear-gradient(0deg, #03001400, #03001490);
+    height: 7vw;
+}
+.content-wrapper:after {
+    /* Glare on card */
+    position: absolute;
+    content: "";
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: radial-gradient(circle at right bottom, transparent 75%, rgba(255, 255, 255, 0.35) 80%, transparent);
 }
 .toolbox .card img{
     height: 5vw;
@@ -147,6 +160,7 @@
     font-size: 1.0rem;
     color: #d6e2e7 ;
     margin-top: 1vw;
+    opacity: 0.8;
 }
 .toolbox .list{
     font-size: .8rem;
