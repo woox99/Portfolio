@@ -198,21 +198,46 @@
 
     .toolbox .cards {
         flex-wrap: wrap;
+        margin-top: 0 !important;
         /* background-color: wheat; */
     }
-
+    
     .toolbox .card {
         width: 33vw !important;
         height: 50vw !important;
     }
-
+    
     .toolbox .tools {
-        display: none;
+        /* display: none; */
+        /* transform: scale(1.5); */
+        /* background-color: red; */
+    }
+    .toolbox .row1{
+
+    }
+    .toolbox .row2{
+        display: none !important;
+        margin-top: 0 !important;
+        /* position: absolute; */
+        /* background-color: red; */
+    }
+    .toolbox .row2-mobile{
+        display: block !important;
+        width: 73vw !important;
+        /* background-color: red; */
+    }
+    .cards :nth-child(4){
+        order:5;
     }
 
-    .toolbox .card-3,
-    .toolbox .card-4 {
-        margin-top: 50vw;
+    .toolbox .card-1{
+        margin-top: 10vw;
+    }
+    .toolbox .card-3 {
+        /* margin-top: 30vw; */
+    }
+    .toolbox .card-4{
+        margin-top: 10vw;
     }
 
     .toolbox .card-3,
@@ -225,7 +250,4 @@
         transform: none !important;
     }
 
-    .cards :nth-child(3){
-        order:4;
-    }
 }
