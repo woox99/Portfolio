@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Righteous&family=Roboto+Mono:wght@700&display=swap');
-*{
+
+* {
     /* border: 1px solid white; */
     margin: 0;
     padding: 0;
@@ -7,10 +8,98 @@
 
 /* ########## PROJECTS SECTION ######### */
 
-.contact{
+.contact {
     padding-top: 10vw;
     transition: opacity 0.5s ease;
-    background-color: yellow;
-    height: 100vh; /*remove*/
+    /* background-color: yellow; */
+    /* height: 100vh; */
+    /*remove*/
 
 }
+
+.hexagons{
+    display: flex;
+    margin-bottom: 3vw;
+    transform: scale(0.99);
+    /* opacity: .4; */
+}
+.col{
+    margin-right: -1.5vw;
+}
+.col-even{
+    margin-top: -4.25vw;
+}
+.hexa1 {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    -moz-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    -ms-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
+    width: 8.8vw;
+    height: 7.6vw;
+    padding: 2px;
+    /* background-color: #ffffff; */
+    background-image: linear-gradient(-30deg, #00a4ed, #ffffff 70%);
+    /* background-image: linear-gradient(-30deg, #030014 10%, #ffffff); */
+    margin-top: 0.8vw;
+    /* opacity: .8; */
+}
+.hexa2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    -moz-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    -ms-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
+    background-color: #030014;
+    /* background-color: #00a4ed; */
+    width: 100%;
+    height: 100%;
+    /* opacity: .8; */
+
+}
+.hexa3{
+    position: relative;
+    -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    -moz-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    -ms-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
+    background-image: linear-gradient(-30deg, #030014 20%, #00a4ed);
+    width: 95%;
+    height: 95%;
+}
+
+/* Glare indvidual hexagons */
+.hexa3:after {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    top: 0vw;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: radial-gradient(circle at right bottom, transparent 70%, rgba(255, 255, 255, 0.35) 80%, transparent);
+}
+
+
+/* Glare on all hexagon */
+.hexa1:after {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    top: -10vw;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: radial-gradient(circle at right bottom, transparent 65%, rgba(255, 255, 255, 0.35) 20%, transparent);
+}
+
+
+
