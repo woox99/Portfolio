@@ -198,7 +198,7 @@
     }
 
     .toolbox {
-        padding-top: 20vw !important;
+        padding-top: 17vw !important;
         padding-left: 5vw;
         min-height: 100vh;
         /* background-color: wheat; */
@@ -206,6 +206,7 @@
 
     .toolbox .cards {
         margin-top: 0 !important;
+        margin-top: -9vw !important;
     }
 
     .toolbox .card {
@@ -233,7 +234,7 @@
         /* background-color: red; */
     }
     .toolbox .row2{
-        margin-top: -12vw !important;
+        margin-top: -18vw !important;
     }
 
     .toolbox .top-row {
