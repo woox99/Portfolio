@@ -201,12 +201,11 @@
         padding-top: 17vw !important;
         padding-left: 5vw;
         min-height: 100vh;
-        /* background-color: wheat; */
     }
 
     .toolbox .cards {
         margin-top: 0 !important;
-        margin-top: -9vw !important;
+        margin-top: -6vw !important;
     }
 
     .toolbox .card {
@@ -216,7 +215,7 @@
 
     .toolbox .card-1,
     .toolbox .card-4 {
-        margin-top: 15vw;
+        margin-top: 14vw;
     }
 
 
@@ -231,10 +230,10 @@
     .toolbox .row2 {
         margin: 0 !important;
         display: block !important;
-        /* background-color: red; */
     }
-    .toolbox .row2{
-        margin-top: -18vw !important;
+
+    .toolbox .row2 {
+        margin-top: -14vw !important;
     }
 
     .toolbox .top-row {
@@ -242,35 +241,47 @@
     }
 
     .toolbox .row1 img,
-    .toolbox .row2 img{
+    .toolbox .row2 img {
         transform: scale(1.75);
         transform-origin: left;
         margin-top: 3vw;
     }
-    .toolbox .row2 img{
+
+    .toolbox .row2 img {
         margin-top: 3.4vw;
     }
-    .toolbox .top-row img{
+
+    .toolbox .top-row img {
         transform-origin: right;
     }
-    .toolbox .mysql{
+
+    .toolbox .mysql {
         margin-right: 18vw;
     }
-    .toolbox .node{
+
+    .toolbox .node {
         margin-left: 15vw;
     }
-    /* .toolbox .python{
-        margin-top: 3vw !important;
-    } */
-    .toolbox .mongo{
+
+    .toolbox .mongo {
         margin-right: 14vw !important;
     }
-    .toolbox .react{
+
+    .toolbox .react {
         margin-left: 12vw;
     }
 
-    .toolbox .row1,
-    .toolbox .row2{
-        /* background-color: red; */
+    .toolbox .card img {
+        height: 9vw !important;
+        margin-top: 3vw !important;
     }
+
+    .toolbox .title {
+        margin-top: 2vw !important;
+    }
+
+    .toolbox .list {
+        margin-top: 3vw !important;
+    }
+
 }
