@@ -114,36 +114,8 @@ function startTextEffect(title) {
 
 }
 
-// Create a single Intersection Observer to trigger the text effect for different sections
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            const section = entry.target.getAttribute("data-section");
-            const title = titles[section];
-            startTextEffect(title);
-            // Fade in section on intersection
-            setTimeout(() => {
-                entry.target.style.opacity = '1';
-            }, 0)
-        }
-        else {
-            setTimeout(() => {
-                entry.target.style.opacity = '0';
-            }, 0)
-        }
-    });
-}, {
-    threshold: .2, // Observer will trigger when threshold is reached
-});
-
-// Observe multiple sections
-const sectionsToObserve = document.querySelectorAll('[data-section]');
-sectionsToObserve.forEach((section) => {
-    observer.observe(section);
-});
 
 // Intro section observer
-const intro = document.querySelector('.title');
 const introTags = document.getElementById('introTags');
 const introObserver = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
@@ -152,7 +124,7 @@ const introObserver = new IntersectionObserver((entries) => {
             intro.style.opacity = '1';
             introTags.style.opacity = '0.5';
             titles['projects'].style.opacity = '0';
-
+            
         }, 0)
         // Unhighlight tab
         tabs['projects'].style.color = '#d6e2e7'
@@ -170,8 +142,85 @@ const introObserver = new IntersectionObserver((entries) => {
 });
 
 // Start observing the intro section
+const intro = document.querySelector('.title');
 introObserver.observe(intro);
 
+
+// Projects section observer
+const projectsObserver = new IntersectionObserver((entries) => {
+    const entry = entries[0];
+    if (entry.isIntersecting) {
+        const section = entry.target.getAttribute('data-section');
+        const title = titles[section];
+        startTextEffect(title);
+
+        setTimeout(() => {
+            entry.target.style.opacity = '1';
+        }, 0)
+    }
+    else {
+        setTimeout(() => {
+            entry.target.style.opacity = '0';
+        }, 0)
+    }
+}, {
+    threshold: .17,
+});
+
+// Start observing projects section
+const projects = document.querySelector('.projects');
+projectsObserver.observe(projects)
+
+
+// Toolbox section observer
+const toolboxObserver = new IntersectionObserver((entries) => {
+    const entry = entries[0];
+    if (entry.isIntersecting) {
+        const section = entry.target.getAttribute('data-section');
+        const title = titles[section];
+        startTextEffect(title);
+
+        setTimeout(() => {
+            entry.target.style.opacity = '1';
+        }, 0)
+    }
+    else {
+        setTimeout(() => {
+            entry.target.style.opacity = '0';
+        }, 0)
+    }
+}, {
+    threshold: 0.51,
+});
+
+// Start observing toolbox section
+const toolbox = document.querySelector('.toolbox');
+toolboxObserver.observe(toolbox)
+
+// Contact section observer
+const contactObserver = new IntersectionObserver((entries) => {
+    const entry = entries[0];
+    if (entry.isIntersecting) {
+        const section = entry.target.getAttribute('data-section');
+        const title = titles[section];
+        startTextEffect(title);
+
+        setTimeout(() => {
+            entry.target.style.opacity = '1';
+        }, 0)
+    }
+    else {
+        setTimeout(() => {
+            entry.target.style.opacity = '0';
+        }, 0)
+    }
+}, {
+    threshold: 0.51,
+});
+
+// Start observing contact section
+const contact = document.querySelector('.contact');
+contactObserver.observe(contact)
 
 
 
