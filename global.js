@@ -115,7 +115,7 @@ function startTextEffect(title) {
 }
 
 
-// Intro section observer
+// ########## INTRO OBSERVER #########
 const introTags = document.getElementById('introTags');
 const introObserver = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
@@ -124,7 +124,7 @@ const introObserver = new IntersectionObserver((entries) => {
             intro.style.opacity = '1';
             introTags.style.opacity = '0.5';
             titles['projects'].style.opacity = '0';
-            
+
         }, 0)
         // Unhighlight tab
         tabs['projects'].style.color = '#d6e2e7'
@@ -146,7 +146,7 @@ const intro = document.querySelector('.title');
 introObserver.observe(intro);
 
 
-// Projects section observer
+// ########## PROJECTS OBSERVER #########
 const projectsObserver = new IntersectionObserver((entries) => {
     const entry = entries[0];
     if (entry.isIntersecting) {
@@ -172,7 +172,7 @@ const projects = document.querySelector('.projects');
 projectsObserver.observe(projects)
 
 
-// Toolbox section observer
+// ########## TOOLBOX OBSERVER #########
 const toolboxObserver = new IntersectionObserver((entries) => {
     const entry = entries[0];
     if (entry.isIntersecting) {
@@ -197,7 +197,7 @@ const toolboxObserver = new IntersectionObserver((entries) => {
 const toolbox = document.querySelector('.toolbox');
 toolboxObserver.observe(toolbox)
 
-// Contact section observer
+// ########## CONTACT OBSERVER #########
 const contactObserver = new IntersectionObserver((entries) => {
     const entry = entries[0];
     if (entry.isIntersecting) {
@@ -207,11 +207,17 @@ const contactObserver = new IntersectionObserver((entries) => {
 
         setTimeout(() => {
             entry.target.style.opacity = '1';
+            createHexagon();
         }, 0)
     }
     else {
         setTimeout(() => {
             entry.target.style.opacity = '0';
+            //Reset hexagons to non-visible
+            hexagons = document.querySelectorAll('.hexa1');
+            hexagons.forEach( hexagon => {
+                hexagon.style.opacity = '0';
+            })
         }, 0)
     }
 }, {
@@ -222,6 +228,35 @@ const contactObserver = new IntersectionObserver((entries) => {
 const contact = document.querySelector('.contact');
 contactObserver.observe(contact)
 
+
+// ########## MAKE HEXAGONS RANDOMLY APPEAR #########
+const createHexagon = () => {
+    hexagons = document.querySelectorAll('.hexa1');
+
+    //Create an array with random numbers between 0 and hexagons length
+    const randomArr = [];
+    while (randomArr.length < hexagons.length) {
+        const randomNum = Math.floor(Math.random() * hexagons.length);
+        if (!randomArr.includes(randomNum)) {
+            randomArr.push(randomNum);
+        }
+    }
+
+    let i = 0;
+    //Make hexagons appear in the order of randomArr
+    const interval = setInterval( () => {
+        if (i < randomArr.length) {
+            const randomIndex = randomArr[i];
+            hexagons[randomIndex].style.opacity = '1';
+            i++;
+            console.log(i)
+        }
+        else{
+            clearInterval(interval);
+        }
+        }, 35)
+
+}
 
 
 
