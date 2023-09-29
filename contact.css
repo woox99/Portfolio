@@ -42,12 +42,11 @@
     width: 8.8vw;
     height: 7.6vw;
     padding: 2px;
-    /* background-color: #ffffff; */
-    background-image: linear-gradient(-30deg, #00a4ed, #ffffff 70%);
-    /* background-image: linear-gradient(-30deg, #030014 10%, #ffffff); */
+    background-image: linear-gradient(-30deg, #00a4ed00, #ffffff 70%);
     margin-top: 0.8vw;
-    /* opacity: .8; */
 }
+
+/* Dark Border */
 .hexa2{
     position: relative;
     display: flex;
@@ -59,25 +58,12 @@
     -ms-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
     clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
     background-color: #030014;
-    /* background-color: #00a4ed; */
     width: 100%;
     height: 100%;
-    /* opacity: .8; */
-
-}
-.hexa3{
-    position: relative;
-    -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-    -moz-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-    -ms-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-    clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
-    background-image: linear-gradient(-30deg, #030014 20%, #00a4ed);
-    width: 95%;
-    height: 95%;
 }
 
-/* Glare indvidual hexagons */
-.hexa3:after {
+/* Gradient Background top-left */
+.hexa2:before {
     position: absolute;
     content: "";
     z-index: 1;
@@ -85,8 +71,60 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: radial-gradient(circle at right bottom, transparent 70%, rgba(255, 255, 255, 0.35) 80%, transparent);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    -moz-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    -ms-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
+    background-image: linear-gradient(-30deg, #00a4ed 50%, #030014 80%);
+    width: 95%;
+    height: 95%;
 }
+/* Gradient background bottom right */
+.hexa3{
+    position: absolute;
+    content: "";
+    z-index: 1;
+    top: 0vw;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    -moz-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    -ms-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
+    background-image: linear-gradient(-30deg, #030014 20%, #00a4ed00 50%);
+    width: 100%;
+    height: 100%;
+}
+
+/* Glare on indvidual hexagons */
+.hexa2:after {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    top: 0vw;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: radial-gradient(circle at right bottom, transparent 70%, rgba(255, 255, 255, 0.45) 80%, transparent);
+}
+
+/* .hexa2:after {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    top: 0vw;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(-30deg, #030014 15%, #00a4ed00 50%);
+} */
 
 
 /* Glare on all hexagon */
@@ -101,5 +139,16 @@
     background: radial-gradient(circle at right bottom, transparent 65%, rgba(255, 255, 255, 0.35) 20%, transparent);
 }
 
+
+/* .hexa3{
+    position: relative;
+    -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    -moz-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    -ms-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    clip-path: polygon(0 50%, 25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%);
+    background-image: linear-gradient(-30deg, #00a4ed, #030014 70%);
+    width: 95%;
+    height: 95%;
+} */
 
 
