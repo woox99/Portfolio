@@ -142,7 +142,7 @@ sectionsToObserve.forEach((section) => {
     observer.observe(section);
 });
 
-// Make projects title fade out when last name is observed
+// Intro section observer
 const intro = document.querySelector('.title');
 const introTags = document.getElementById('introTags');
 const introObserver = new IntersectionObserver((entries) => {
