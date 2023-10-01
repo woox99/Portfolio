@@ -1,3 +1,11 @@
+// ########## CLEAR MESSAGE FORM #########
+window.onbeforeunload = () => {
+    for (const form of document.getElementsByTagName('form')) {
+        form.reset();
+    }
+}
+
+
 
 // ########## SCROLL TO SECTION #########
 document.addEventListener("DOMContentLoaded", function () {
@@ -20,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
 
 // ########## SLIDER #########
 const sliderTop = document.getElementById("sliderTop");
@@ -45,6 +55,8 @@ window.addEventListener("scroll", () => {
 window.addEventListener("resize", () => {
     calculateSlider(document.documentElement.scrollHeight, window.innerWidth, window.innerHeight);
 })
+
+
 
 // ########## SECTION TITLE TEXT EFFECT #########
 const letters = "abcdefghijklmnopqrstuvwxyz";
@@ -172,6 +184,7 @@ const projects = document.querySelector('.projects');
 projectsObserver.observe(projects)
 
 
+
 // ########## TOOLBOX OBSERVER #########
 const toolboxObserver = new IntersectionObserver((entries) => {
     const entry = entries[0];
@@ -197,6 +210,8 @@ const toolboxObserver = new IntersectionObserver((entries) => {
 const toolbox = document.querySelector('.toolbox');
 toolboxObserver.observe(toolbox)
 
+
+
 // ########## CONTACT OBSERVER #########
 const contactObserver = new IntersectionObserver((entries) => {
     const entry = entries[0];
@@ -215,7 +230,7 @@ const contactObserver = new IntersectionObserver((entries) => {
             entry.target.style.opacity = '0';
             //Reset hexagons to non-visible
             hexagons = document.querySelectorAll('.hexa1');
-            hexagons.forEach( hexagon => {
+            hexagons.forEach(hexagon => {
                 hexagon.style.opacity = '0';
             })
         }, 0)
@@ -229,32 +244,33 @@ const contact = document.querySelector('.contact');
 contactObserver.observe(contact)
 
 
+
 // ########## MAKE HEXAGONS RANDOMLY APPEAR #########
 const createHexagon = () => {
-        hexagons = document.querySelectorAll('.hexa1');
-    
-        //Create an array with random numbers between 0 and hexagons length
-        const randomArr = [];
-        while (randomArr.length < hexagons.length) {
-            const randomNum = Math.floor(Math.random() * hexagons.length);
-            if (!randomArr.includes(randomNum)) {
-                randomArr.push(randomNum);
-            }
+    hexagons = document.querySelectorAll('.hexa1');
+
+    //Create an array with random numbers between 0 and hexagons length
+    const randomArr = [];
+    while (randomArr.length < hexagons.length) {
+        const randomNum = Math.floor(Math.random() * hexagons.length);
+        if (!randomArr.includes(randomNum)) {
+            randomArr.push(randomNum);
         }
-    
-        let i = 0;
-        //Make hexagons appear in the order of randomArr
-        const interval = setInterval( () => {
-            if (i < randomArr.length) {
-                const randomIndex = randomArr[i];
-                console.log(randomArr[i]); //debug
-                hexagons[randomIndex].style.opacity = '1';
-                i++;
-            }
-            else{
-                clearInterval(interval);
-            }
-            }, 35)
+    }
+
+    let i = 0;
+    //Make hexagons appear in the order of randomArr
+    const interval = setInterval(() => {
+        if (i < randomArr.length) {
+            const randomIndex = randomArr[i];
+            console.log(randomArr[i]); //debug
+            hexagons[randomIndex].style.opacity = '1';
+            i++;
+        }
+        else {
+            clearInterval(interval);
+        }
+    }, 35)
 }
 
 
