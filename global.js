@@ -1,6 +1,7 @@
 // ########## CLEAR MESSAGE FORM #########
 window.onbeforeunload = () => {
-    for (const form of document.getElementById('form')) {
+    const form = document.getElementById('form');
+    if (form) {
         form.reset();
     }
 }
