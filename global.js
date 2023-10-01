@@ -204,11 +204,11 @@ const contactObserver = new IntersectionObserver((entries) => {
         const section = entry.target.getAttribute('data-section');
         const title = titles[section];
         startTextEffect(title);
+        entry.target.style.opacity = '1';
 
         setTimeout(() => {
-            entry.target.style.opacity = '1';
             createHexagon();
-        }, 0)
+        }, 200)
     }
     else {
         setTimeout(() => {
@@ -231,31 +231,30 @@ contactObserver.observe(contact)
 
 // ########## MAKE HEXAGONS RANDOMLY APPEAR #########
 const createHexagon = () => {
-    hexagons = document.querySelectorAll('.hexa1');
-
-    //Create an array with random numbers between 0 and hexagons length
-    const randomArr = [];
-    while (randomArr.length < hexagons.length) {
-        const randomNum = Math.floor(Math.random() * hexagons.length);
-        if (!randomArr.includes(randomNum)) {
-            randomArr.push(randomNum);
+        hexagons = document.querySelectorAll('.hexa1');
+    
+        //Create an array with random numbers between 0 and hexagons length
+        const randomArr = [];
+        while (randomArr.length < hexagons.length) {
+            const randomNum = Math.floor(Math.random() * hexagons.length);
+            if (!randomArr.includes(randomNum)) {
+                randomArr.push(randomNum);
+            }
         }
-    }
-
-    let i = 0;
-    //Make hexagons appear in the order of randomArr
-    const interval = setInterval( () => {
-        if (i < randomArr.length) {
-            const randomIndex = randomArr[i];
-            hexagons[randomIndex].style.opacity = '1';
-            i++;
-            console.log(i)
-        }
-        else{
-            clearInterval(interval);
-        }
-        }, 35)
-
+    
+        let i = 0;
+        //Make hexagons appear in the order of randomArr
+        const interval = setInterval( () => {
+            if (i < randomArr.length) {
+                const randomIndex = randomArr[i];
+                console.log(randomArr[i]); //debug
+                hexagons[randomIndex].style.opacity = '1';
+                i++;
+            }
+            else{
+                clearInterval(interval);
+            }
+            }, 35)
 }
 
 
