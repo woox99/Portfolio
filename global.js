@@ -7,20 +7,21 @@ window.onbeforeunload = () => {
 }
 
 // ##### SATELLITE ANIMATION ######
-// const satellite1 = document.querySelector(".satellite1");
-// const satellite2 = document.querySelector(".satellite2");
-// let rotationAngle1 = 0;
-// let rotationAngle2 = 0;
-
-// function rotateImage() {
-//     rotationAngle1 += 0.1;
-//     rotationAngle2 -= 0.3;
-//     satellite1.style.transform = `rotate(${rotationAngle1}deg)`;
-//     satellite2.style.transform = `rotate(${rotationAngle2}deg)`;
-// }
-
-// setInterval(rotateImage, 40);
-
+document.addEventListener("DOMContentLoaded", function () {
+    const satellite1 = document.querySelector(".satellite1");
+    const satellite2 = document.querySelector(".satellite2");
+    let rotationAngle1 = 0;
+    let rotationAngle2 = 0;
+    
+    function rotateImage() {
+        rotationAngle1 += 0.1;
+        rotationAngle2 -= 0.3;
+        satellite1.style.transform = `rotate(${rotationAngle1}deg)`;
+        satellite2.style.transform = `rotate(${rotationAngle2}deg)`;
+    }
+    
+    setInterval(rotateImage, 40);
+});
 
 // ########## SCROLL TO SECTION #########
 document.addEventListener("DOMContentLoaded", function () {
