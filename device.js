@@ -1,4 +1,6 @@
 let test = 'test';
+
+// ##### DEVICE PROJECT BUTTONS ######
 const iphone = document.querySelectorAll('.iphone');
 const macbook = document.querySelectorAll('.macbook');
 const iphoneBtn = document.querySelectorAll('.iphone-btn');
@@ -37,3 +39,5 @@ const showMacbook = (projectNum) => {
     iphoneBtn[projectNum - 1].style.backgroundColor = '#d6e2e700';
     iphoneBtn[projectNum - 1].style.border = '1px solid #d6e2e750';
 }
+
+ 
