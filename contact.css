@@ -13,13 +13,19 @@
     height: calc(100vh - 10vw);
     transition: opacity 0.5s ease;
 }
+form{
+    margin-left: 18vw;
+}
 .contact .title p{
     height: 3vw;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    font-size: 0.8rem;
-    margin-top: 2.5vw;
+    /* font-size: 0.8rem; */
+    margin-top: 2vw;
+}
+.contact .title :nth-child(2){
+    margin-top: 2.25vw;
 }
 .contact .inputs{
     display: flex;
@@ -29,14 +35,13 @@
 .contact textarea{
     background-color: #d6e2e745;
     border: 1px solid #030014;
-    height: 3vw;
+    height: 3.25vw;
     width: 25vw;
-    margin-top: 2.5vw;
-    border-radius: 1vw;
+    margin-top: 2vw;
+    border-radius: 1.25vw;
     margin-left: 1vw;
     padding-left: 1vw;
     padding-right: 1vw;
-    /* font-family: 'Open sans'; */
     font-weight: 400;
     font-size: 0.8rem;
     color: #d6e2e7;
@@ -50,20 +55,29 @@
 }
 
 .contact textarea{
-    height: 20vw;
+    height: 17vw;
     padding: 1vw;
     resize: none;
+}
+.contact textarea:focus + .messageText{
+        opacity: 10%;
+}
+.contact .messageText{
+    position: relative;
+    bottom: 10.5vw;
+    z-index: 1;
+    text-align: center;
+    /* font-size: 0.8rem; */
 }
 .contact button{
     background-color: #03001400;
     color: #d6e2e7;
     font-family: 'Righteous';
     border: none;
-    font-size: 0.8rem;
+    font-size: 1.0rem;
     transition: 0.2s;
-    margin-left: 29vw;
+    margin-left: 26vw;
     letter-spacing: 0.2vw;
-    /* background-color: red; */
     width: 5vw;
     height: 2vw;
 }

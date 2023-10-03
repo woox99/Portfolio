@@ -44,6 +44,7 @@ BORDER WIDTH
 */
 html{
     font-size: 1.5vw;
+    overflow-x: hidden;
 }
 body{
     background-color: #030014;

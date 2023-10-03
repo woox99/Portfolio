@@ -7,15 +7,15 @@ window.onbeforeunload = () => {
 }
 
 // ##### SATELLITE ANIMATION ######
+const satellite1 = document.querySelector(".satellite1");
+const satellite2 = document.querySelector(".satellite2");
 document.addEventListener("DOMContentLoaded", function () {
-    const satellite1 = document.querySelector(".satellite1");
-    const satellite2 = document.querySelector(".satellite2");
     let rotationAngle1 = 0;
     let rotationAngle2 = 0;
     
     function rotateImage() {
         rotationAngle1 += 0.1;
-        rotationAngle2 -= 0.3;
+        rotationAngle2 -= 0.4;
         satellite1.style.transform = `rotate(${rotationAngle1}deg)`;
         satellite2.style.transform = `rotate(${rotationAngle2}deg)`;
     }
@@ -264,33 +264,6 @@ contactObserver.observe(contact)
 
 
 
-// ########## MAKE HEXAGONS RANDOMLY APPEAR #########
-const createHexagon = () => {
-    hexagons = document.querySelectorAll('.hexa1');
-
-    //Create an array with random numbers between 0 and hexagons length
-    const randomArr = [];
-    while (randomArr.length < hexagons.length) {
-        const randomNum = Math.floor(Math.random() * hexagons.length);
-        if (!randomArr.includes(randomNum)) {
-            randomArr.push(randomNum);
-        }
-    }
-
-    let i = 0;
-    //Make hexagons appear in the order of randomArr
-    const interval = setInterval(() => {
-        if (i < randomArr.length) {
-            const randomIndex = randomArr[i];
-            console.log(randomArr[i]); //debug
-            hexagons[randomIndex].style.opacity = '1';
-            i++;
-        }
-        else {
-            clearInterval(interval);
-        }
-    }, 35)
-}
 
 
 
