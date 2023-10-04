@@ -70,18 +70,17 @@
     }
 
     .intro .satellite1{
-        width: 40vw !important;
-        height: 40vw !important;
-        margin-top: 60vw;
-        margin-left: -20vw;
+        width: 45vw !important;
+        height: 45vw !important;
     }
     .intro .satellite2{
-        width: 21vw !important;
-        height: 14vw !important;
-        margin-top: 160vw;
-        margin-left: -20vw
+        width: 12vw !important;
+        height: 8vw !important;
     }
-
+    .intro img{
+        margin-top: 105vw;
+        margin-left: -25vw;
+    }
     /* When screen width AND height is small */
     @media (max-height: 400px) {
         .intro .tags {
