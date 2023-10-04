@@ -13,7 +13,7 @@
     height: calc(100vh - 10vw);
     transition: opacity 0.5s ease;
 }
-form{
+.contact form{
     margin-left: 18vw;
 }
 .contact .title p{
@@ -21,7 +21,6 @@ form{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    /* font-size: 0.8rem; */
     margin-top: 2vw;
 }
 .contact .title :nth-child(2){
@@ -60,15 +59,14 @@ form{
     padding: 1vw;
     resize: none;
 }
-.contact textarea:focus + .messageText{
+/* .contact textarea:focus + .messageText{
         opacity: 10%;
-}
+} */
 .contact .messageText{
     position: relative;
     bottom: 10.5vw;
     z-index: 1;
     text-align: center;
-    /* font-size: 0.8rem; */
 }
 .contact button{
     background-color: #03001400;

@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(rotateImage, 40);
 });
 
+
 // ########## SCROLL TO SECTION #########
 document.addEventListener("DOMContentLoaded", function () {
     // Add smooth scrolling behavior to links with the "smooth-scroll" class
@@ -71,6 +72,14 @@ window.addEventListener("scroll", () => {
 window.addEventListener("resize", () => {
     calculateSlider(document.documentElement.scrollHeight, window.innerWidth, window.innerHeight);
 })
+
+
+// ########## HIDE 'MESSAGE' TEXT #########
+const hideText = () => {
+    const text = document.querySelector('.messageText');
+    text.style.opacity = '10%';
+}
+
 
 
 
@@ -144,7 +153,7 @@ function startTextEffect(title) {
 
 
 // ########## INTRO OBSERVER #########
-const introTags = document.getElementById('introTags');
+// const introTags = document.getElementById('introTags');
 const introObserver = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
         setTimeout(() => {
@@ -169,11 +178,11 @@ const introObserver = new IntersectionObserver((entries) => {
         }, 0)
     }
 }, {
-    threshold: .9,
+    threshold: .51,
 });
 
 // Start observing the intro section
-const intro = document.querySelector('.title');
+const intro = document.querySelector('.intro');
 introObserver.observe(intro);
 
 
@@ -246,7 +255,7 @@ const contactObserver = new IntersectionObserver((entries) => {
         }, 0)
     }
 }, {
-    threshold: 0.51,
+    threshold: 0.61,
 });
 
 // Start observing contact section

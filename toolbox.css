@@ -120,6 +120,7 @@
     left: 0;
     right: 0;
     background-image: linear-gradient(0deg, #03001400, #03001490);
+    border-radius: 4px;
     height: 7vw;
 }
 .toolbox .content-wrapper:after {
@@ -132,6 +133,7 @@
     left: 0;
     right: 0;
     background: radial-gradient(circle at right bottom, transparent 75%, rgba(255, 255, 255, 0.35) 80%, transparent);
+    border-radius: 4px;
 }
 .toolbox .card img{
     height: 5vw;

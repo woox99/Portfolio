@@ -557,9 +557,12 @@
                         <p>email</p>
                     </div>
                     <div class="inputs">
+                        <p class="mobileNameText" style="display: none;">name</p>
                         <input class="name-input" name="subject" type="text" required>
+                        <p class="mobileEmailText" style="display: none;">email</p>
                         <input class="email-input" name="email" type="email" required>
-                        <textarea name="message" id="" required></textarea>
+                        <p class="mobileMessageText" style="display: none;">message</p>
+                        <textarea name="message" id="" required onclick="hideText()"></textarea>
                         <p class="messageText">message</p>
                     </div>
                 </div>
