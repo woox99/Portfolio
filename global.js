@@ -150,9 +150,9 @@ const introObserver = new IntersectionObserver((entries) => {
         setTimeout(() => {
             //Fade in intro section
             intro.style.opacity = '1';
-            introTags.style.opacity = '0.5';
             titles['projects'].style.opacity = '0';
             satellite1.style.opacity = '1';
+            satellite2.style.opacity = '1';
 
 
         }, 0)
@@ -163,9 +163,9 @@ const introObserver = new IntersectionObserver((entries) => {
     else {
         setTimeout(() => {
             //Fade out intro section
-            satellite1.style.opacity = '0';
             intro.style.opacity = '0';
-            introTags.style.opacity = '0';
+            satellite1.style.opacity = '0';
+            satellite2.style.opacity = '0';
         }, 0)
     }
 }, {
@@ -239,19 +239,10 @@ const contactObserver = new IntersectionObserver((entries) => {
         const title = titles[section];
         startTextEffect(title);
         entry.target.style.opacity = '1';
-
-        setTimeout(() => {
-            createHexagon();
-        }, 200)
     }
     else {
         setTimeout(() => {
             entry.target.style.opacity = '0';
-            //Reset hexagons to non-visible
-            hexagons = document.querySelectorAll('.hexa1');
-            hexagons.forEach(hexagon => {
-                hexagon.style.opacity = '0';
-            })
         }, 0)
     }
 }, {

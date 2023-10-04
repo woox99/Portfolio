@@ -18,13 +18,14 @@
 
     /* ########## BAR AND SLIDER ######### */
     .nav {
-        height: 18vw;
+        height: 20vw;
         background: linear-gradient(180deg, #030014 30%, #03001400);
+        font-size: 1.2rem;
     }
 
     .nav .links {
-        gap: 10vw;
-        margin-top: 2vw;
+        /* gap: 10vw; */
+        margin-top: 4vw;
     }
 
     .nav button,
@@ -51,11 +52,11 @@
     }
 
     .intro .title p {
-        font-size: .75rem;
+        /* font-size: .75rem; */
     }
 
     .intro h1 {
-        font-size: 2.25rem !important;
+        font-size: 2.5rem !important;
     }
 
     .intro .tags {
@@ -66,6 +67,19 @@
         left: 10vw;
         opacity: 50%;
         transition: 0.5s;
+    }
+
+    .intro .satellite1{
+        width: 40vw !important;
+        height: 40vw !important;
+        margin-top: 60vw;
+        margin-left: -20vw;
+    }
+    .intro .satellite2{
+        width: 21vw !important;
+        height: 14vw !important;
+        margin-top: 160vw;
+        margin-left: -20vw
     }
 
     /* When screen width AND height is small */
