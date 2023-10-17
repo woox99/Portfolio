@@ -308,30 +308,25 @@
     .contact{
         /* background-color: wheat; */
         height: 70vh !important;
-        display: flex;
-        justify-content: center;
     }
     .contact form{
-        margin: 0 !important;
-        font-size: 1rem !important;  
-        margin-top: -20vw !important;
+        position: relative;
+        width: 60vw;
+        padding-top: 5vw !important;
         /* background-color: red; */
+    }
+    .contact form p{
+        font-size: 1rem !important;
     }
     .contact input,
     .contact textarea{
-        width: 60vw !important;
-        /* margin-top: 10vw !important; */
-        border-radius: 2.75vw !important;
-        font-size: 1rem !important;
+        width: 59vw !important;
     }
     .contact input{
         height: 8vw !important;
     }
     .contact textarea{
-        height: 45vw !important;
-    }
-    .contact .title{
-        display: none !important;
+        height: 40vw !important;
     }
     .contact p{
         display: block !important;
@@ -339,12 +334,11 @@
         margin-top: 5vw;
         font-size: 1.5rem;
     }
-    .contact .messageText{
-        display: none !important;
-    }
     .contact button{
         margin-top: 2vw !important;
-        font-size: 1.5rem !important;
+        font-size: 1rem !important;
+        height: 7vw !important;
+        width: 14vw !important;
     }
     /* .contact .title p{
         margin-top: 13vw !important;
