@@ -92,12 +92,6 @@ window.addEventListener("resize", () => {
 })
 
 
-// ########## HIDE 'MESSAGE' TEXT #########
-const hideText = () => {
-    const text = document.querySelector('.messageText');
-    text.style.opacity = '10%';
-}
-
 
 
 

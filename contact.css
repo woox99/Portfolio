@@ -9,22 +9,37 @@
 /* ########## PROJECTS SECTION ######### */
 
 .contact {
-    padding-top: 10vw;
-    height: calc(100vh - 10vw);
+    padding-top: 8vw;
+    height: calc(100vh - 8vw);
     transition: opacity 0.5s ease;
+    display: flex;
+    justify-content: center;
 }
 .contact form{
-    margin-left: 18vw;
+    position: relative;
+    background-image: linear-gradient(#211f2a, #030014);
+	border-radius: 0.5vw 5vw 0.5vw 5vw;
+    padding: 2vw 5vw 2vw 5vw;
+    font-size: 0.8rem;
+    margin-bottom: 5vw;
 }
-.contact .title p{
-    height: 3vw;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: 2vw;
+/* Background gradient */
+.contact form:before{
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.5vw 5vw 0.5vw 5vw;
+    background-image: linear-gradient(-30deg, #030014 20%, #00a4ed);
+    height: calc(100% + 2px);
+    width: calc(100% + 2px);
+
 }
-.contact .title :nth-child(2){
-    margin-top: 2.25vw;
+.contact form p{
+    margin-top: .75vw;
+    margin-left: 0.25vw;
 }
 .contact .inputs{
     display: flex;
@@ -36,9 +51,6 @@
     border: 1px solid #030014;
     height: 3.25vw;
     width: 25vw;
-    margin-top: 2vw;
-    border-radius: 1.25vw;
-    margin-left: 1vw;
     padding-left: 1vw;
     padding-right: 1vw;
     font-weight: 400;
@@ -46,6 +58,7 @@
     color: #d6e2e7;
     letter-spacing: 0.1vw;
     font-family: 'open sans';
+    border-radius: 0.4vw 1vw 0.4vw 1vw;
 }
 .contact input:focus,
 .contact textarea:focus {
@@ -55,18 +68,14 @@
 }
 
 .contact textarea{
-    height: 17vw;
+    height: 12vw;
     padding: 1vw;
     resize: none;
+    margin-bottom: 1vw;
 }
-/* .contact textarea:focus + .messageText{
-        opacity: 10%;
-} */
-.contact .messageText{
-    position: relative;
-    bottom: 10.5vw;
-    z-index: 1;
-    text-align: center;
+.contact .buttonContainer{
+    display: flex;
+    justify-content: end;
 }
 .contact button{
     background-color: #03001400;
@@ -75,14 +84,25 @@
     border: none;
     font-size: 1.0rem;
     transition: 0.2s;
-    margin-left: 26vw;
     letter-spacing: 0.2vw;
-    width: 5vw;
+    width: 5vw; 
     height: 2vw;
+    border: 0.15vw solid #00a4ed;
+    border-radius: 10vw;
+    height: 3vw;
+    width: 7vw;
+    cursor: pointer;
 }
 .contact button:hover{
+    font-size: 1.05rem;
+    color: white;
+}
+.backToTop{
+    text-align: center;
+}
+.contact a{
     color: #00a4ed;
-    transform: scale(1.1);
+    padding-bottom: 1vw;
 }
 
 

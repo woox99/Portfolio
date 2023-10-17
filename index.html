@@ -31,7 +31,8 @@
     <div class="slider">
         <div class="top" id="sliderTop"></div>
         <a class="github" href="https://github.com/woox99" target="_blank"><img src="assets/github2.png" alt=""></a>
-        <a class="linkedin" href="https://www.linkedin.com/in/woox99" target="_blank"><img src="assets/linkedin.png" alt=""></a>
+        <a class="linkedin" href="https://www.linkedin.com/in/woox99" target="_blank"><img src="assets/linkedin.png"
+                alt=""></a>
         <div class="bottom" id="sliderBottom"></div>
     </div>
     <h1 class="introTitle sectionTitle" data-value="intro"></h1>
@@ -40,9 +41,9 @@
     <h1 class="contactTitle sectionTitle" data-value="contact">contact</h1>
 
     <!-- intro section -->
-    <div class="intro">
-            <img class="satellite1" src="assets/satellite1.png" alt="">
-            <img  class="satellite2" src="assets/satellite2.png" alt="">
+    <div class="intro" id="intro-section">
+        <img class="satellite1" src="assets/satellite1.png" alt="">
+        <img class="satellite2" src="assets/satellite2.png" alt="">
 
         <div class="title">
             <p style="margin-left:1vw">A DevFolio by a Full-Stack Developer,</p>
@@ -218,7 +219,7 @@
                         <div class="macbook">
                             <div class="screen">
                                 <!-- ##### PROJECT LINK ##### -->
-                                <a href="http://3.143.25.6/"  target="_blank">
+                                <a href="http://3.143.25.6/" target="_blank">
                                     <div class="viewport">
                                         <!-- ##### PROJECT PHOTO FOR MACBOOK NEEDS A 3:2 RATIO ### -->
                                         <img class="project-sceenshot" src="assets/photovote.png" alt="">
@@ -415,6 +416,7 @@
                                 <p>Java</p>
                                 <p>Python</p>
                                 <p>JavaScript (ES6)</p>
+                                <p>Node.js</p>
                             </div>
                         </div>
                     </div>
@@ -449,7 +451,6 @@
                             <p class="title">Backend</p>
                             <div class="list">
                                 <p>Flask</p>
-                                <p>Node.js</p>
                                 <p>Express</p>
                                 <p>Spring Boot</p>
                             </div>
@@ -485,6 +486,7 @@
                                 <p>Java</p>
                                 <p>Python</p>
                                 <p>JavaScript (ES6)</p>
+                                <p>Node.js</p>
                             </div>
                         </div>
                     </div>
@@ -523,7 +525,6 @@
                             <p class="title">Backend</p>
                             <div class="list">
                                 <p>Flask</p>
-                                <p>Node.js</p>
                                 <p>Express</p>
                                 <p>Spring Boot</p>
                             </div>
@@ -548,28 +549,23 @@
 
         <!-- contact section -->
         <div class="contact" id="contact-section" data-section="contact">
-            <form action="https://formspree.io/f/mgejpkoe" method="POST" id="form">
-                <div class="flex">
-                    <div class="title">
-                        <p>name</p>
-                        <p>email</p>
-                    </div>
-                    <div class="inputs">
-                        <p class="mobileNameText" style="display: none;">name</p>
-                        <input class="name-input" name="subject" type="text" required>
-                        <p class="mobileEmailText" style="display: none;">email</p>
-                        <input class="email-input" name="email" type="email" required>
-                        <p class="mobileMessageText" style="display: none;">message</p>
-                        <textarea name="message" id="" required onclick="hideText()"></textarea>
-                        <p class="messageText">message</p>
-                    </div>
+            <form action="https://formspree.io/f/mgejpkoe" method="POST" id="form" target="_blank">
+                <div class="inputs">
+                    <p class="mobileNameText">name</p>
+                    <input class="name-input" name="subject" type="text" required>
+                    <p class="mobileEmailText">email</p>
+                    <input class="email-input" name="email" type="email" required>
+                    <p class="mobileMessageText">message</p>
+                    <textarea name="message" id="" required></textarea>
                 </div>
-                <button type="submit">SEND</button>
+                <div class="buttonContainer">
+                    <button type="submit">Send</button>
+                </div>
+                <p class="backToTop">Back to <a href="#intro-section" class="smooth-scroll">Top</a>.</p>
             </form>
         </div>
     </div>
 
-    </div>
 
     <script src="global.js"></script>
     <script src="device.js"></script>
