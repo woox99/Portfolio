@@ -1,10 +1,28 @@
-// ########## CLEAR MESSAGE FORM #########
-window.onbeforeunload = () => {
-    const form = document.getElementById('form');
-    if (form) {
-        form.reset();
-    }
+// Download resume
+function downloadResume() {
+    fetch('resume.pdf')
+        .then(response => response.blob())
+        .then(blob => {
+            // Create a temporary anchor element
+            var a = document.createElement('a');
+            a.style.display = 'none';
+            document.body.appendChild(a);
+            
+            // Create a URL for the blob
+            var url = window.URL.createObjectURL(blob);
+            a.href = url;
+            a.download = 'Janulewicz_Garett_Developer_Resume.pdf';
+            
+            // Trigger a click event on the anchor to initiate the download
+            a.click();
+            
+            // Clean up
+            window.URL.revokeObjectURL(url);
+        })
+        .catch(error => console.error('Error:', error));
 }
+
+
 
 // ##### SATELLITE ANIMATION ######
 const satellite1 = document.querySelector(".satellite1");
