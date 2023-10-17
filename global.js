@@ -1,6 +1,6 @@
 // Download resume
 function downloadResume() {
-    fetch('resume.pdf')
+    fetch('Janulewicz_Garett_Developer_Resume.pdf')
         .then(response => response.blob())
         .then(blob => {
             // Create a temporary anchor element
