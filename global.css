@@ -150,10 +150,9 @@ a:hover{
     width: 3vw;
 }
 .slider img{
-    width: 3vw;
+    width: 2.85vw;
 }
 .slider .linkedin{
-    transform: scale(0.8);
 }
 .sectionTitle {
     display: none;
