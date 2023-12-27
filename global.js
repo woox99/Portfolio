@@ -25,21 +25,21 @@ function downloadResume() {
 
 
 // ##### SATELLITE ANIMATION ######
-const satellite1 = document.querySelector(".satellite1");
-const satellite2 = document.querySelector(".satellite2");
-document.addEventListener("DOMContentLoaded", function () {
-    let rotationAngle1 = 0;
-    let rotationAngle2 = 0;
+// const satellite1 = document.querySelector(".satellite1");
+// const satellite2 = document.querySelector(".satellite2");
+// document.addEventListener("DOMContentLoaded", function () {
+//     let rotationAngle1 = 0;
+//     let rotationAngle2 = 0;
     
-    function rotateImage() {
-        rotationAngle1 += 0.1;
-        rotationAngle2 -= 0.4;
-        satellite1.style.transform = `rotate(${rotationAngle1}deg)`;
-        satellite2.style.transform = `rotate(${rotationAngle2}deg)`;
-    }
+//     function rotateImage() {
+//         rotationAngle1 += 0.1;
+//         rotationAngle2 -= 0.4;
+//         satellite1.style.transform = `rotate(${rotationAngle1}deg)`;
+//         satellite2.style.transform = `rotate(${rotationAngle2}deg)`;
+//     }
     
-    setInterval(rotateImage, 40);
-});
+//     setInterval(rotateImage, 40);
+// });
 
 
 // ########## SCROLL TO SECTION #########

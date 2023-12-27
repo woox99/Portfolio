@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Righteous&family=Roboto+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans&display=swap');
 
 *{
     /* border: 1px solid white; */
@@ -95,7 +97,7 @@ a:hover{
 }
 .nav .links{
     position: absolute;
-    left: 15vw;
+    /* left: 15vw; */
     display: flex;
     gap: 6vw;
     opacity: 80%;
@@ -111,11 +113,11 @@ a:hover{
     margin-right: 2vw;
     height: 2vw;
 }
-.nav img{
+/* .nav img{
     width: 2.75vw;
     height: 2.75vw;
     margin-top: -.25vw;
-}
+} */
 .nav button:hover{
     cursor: pointer;
     color: white;
@@ -146,14 +148,14 @@ a:hover{
     /* height: 2vw; */
     height: calc(100vh - 17vw);
 }
-.slider a{
+/* .slider a{
     height: 3vw;
     width: 3vw;
-}
+} */
 .slider img{
     width: 2.85vw;
-}
-.slider .linkedin{
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
 }
 .sectionTitle {
     display: none;

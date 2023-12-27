@@ -14,7 +14,7 @@
     /* background-color: wheat; */
     transition: 0.5s ease;
 }
-.intro .satellite1{
+/* .intro .satellite1{
     overflow-x: scroll;
     position: absolute;
     left: 60vw;
@@ -29,19 +29,32 @@
     top: 20vw;
     width: 12vw;
     transform-origin:top right;
-}
+} */
 .intro .title{
     position: absolute;
-    top: 15vw;
+    top: 6vw;
     left: 10vw;
+    font-family: 'Bungee', sans-serif;
+    /* background-color: red; */
 }
-.intro h1{
-    font-size: 7rem;
-    font-family: 'Open sans';
-    background: linear-gradient(180deg, #d6e2e7 60%, #030014);
-    /* background: url(assets/universe.jpg); */
-    /* background-color: #d6e2e7; */
-    -webkit-background-clip: text; 
-    background-clip: text;
-    color: transparent;
+.intro .name{
+    color: #c300ff;
+    font-size: 2.5rem;
+}
+.intro .field{
+    margin-top: -5vw;
+    font-size: 2.5rem;
+}
+.intro .description{
+    font-family: 'Open Sans', sans-serif;
+    width: 46vw;
+    font-size: .91rem;
+    /* background-color: red; */
+}
+.intro .links{
+    margin-top: 4vw;
+}
+.intro img{
+    width: 2.25vw;
+    margin-right: 1vw;
 }

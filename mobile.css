@@ -26,6 +26,8 @@
     .nav .links {
         /* gap: 10vw; */
         margin-top: 4vw;
+        margin-right: 3vw;
+        font-size: 1rem;
     }
 
     .nav button,
@@ -38,28 +40,47 @@
         margin-bottom: 6vw;
     }
 
+    .slider img{
+        width: 5vw;
+        margin-top: 2vw !important;
+        margin-bottom: 2vw !important;
+    }
     .slider .github,
     .slider .linkedin {
         display: none;
     }
     /* ########## INTRO ######### */
-    .intro img {
+    /* .intro img {
         height: 100vh !important;
-    }
+    } */
 
     .intro .title {
-        top: 15vh !important;
+        top: 20vh !important;
     }
-
-    .intro .title p {
-        /* font-size: .75rem; */
-    }
-
     .intro h1 {
-        font-size: 2.5rem !important;
+        font-size: 1.5rem !important;
+        /* text-align: center; */
+    }
+    .intro .field{ 
+        padding-top: -5vw !important;
+    }
+    .intro .description{
+        font-size: 0.8rem !important;
+        /* text-align: center; */
+        width: unset !important;
+        /* background-color: red; */
+    }
+    .intro .links{
+        /* display: flex; */
+        /* justify-content: center; */
+        margin-top: 5vw !important;
+        gap: 5vw;
+    }
+    .intro img{
+        width: 7vw !important;
     }
 
-    .intro .tags {
+    /* .intro .tags {
         display: block !important;
         position: absolute;
         font-size: 1.25rem;
@@ -67,9 +88,9 @@
         left: 10vw;
         opacity: 50%;
         transition: 0.5s;
-    }
+    } */
 
-    .intro .satellite1{
+    /* .intro .satellite1{
         width: 45vw !important;
         height: 45vw !important;
     }
@@ -80,7 +101,7 @@
     .intro img{
         margin-top: 105vw;
         margin-left: -25vw;
-    }
+    } */
     /* When screen width AND height is small */
     @media (max-height: 400px) {
         .intro .tags {

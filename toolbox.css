@@ -140,8 +140,9 @@
     margin-top: 1.5vw;
 }
 .toolbox .title{
+    font-family: 'Bungee', sans-serif;
     font-size: 1.0rem;
-    color: #d6e2e7 ;
+    color: white ;
     margin-top: 1vw;
     opacity: 0.8;
 }
