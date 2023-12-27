@@ -170,8 +170,8 @@ const introObserver = new IntersectionObserver((entries) => {
         setTimeout(() => {
             //Fade out intro section
             intro.style.opacity = '0';
-            satellite1.style.opacity = '0';
-            satellite2.style.opacity = '0';
+            // satellite1.style.opacity = '0';
+            // satellite2.style.opacity = '0';
         }, 0)
     }
 }, {
