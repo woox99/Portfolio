@@ -157,8 +157,8 @@ const introObserver = new IntersectionObserver((entries) => {
             //Fade in intro section
             intro.style.opacity = '1';
             titles['projects'].style.opacity = '0';
-            satellite1.style.opacity = '1';
-            satellite2.style.opacity = '1';
+            // satellite1.style.opacity = '1';
+            // satellite2.style.opacity = '1';
 
 
         }, 0)
