@@ -16,6 +16,16 @@
     padding-bottom: 5vw;
     display: flex;
 }
+.project-odd{
+    background-image: linear-gradient(90deg, #030014, #32f5a912);
+    border-top-right-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+}
+.project-even{
+    background-image: linear-gradient(270deg, #030014, #32f5a912);
+    border-top-left-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+}
 
 /* Display */
 .display{
@@ -31,6 +41,7 @@
     margin-bottom: .85vw;
     transition: transform 0.3s ease;
 }
+
 .device .iphone{
     width: 70%;
     transition: transform 0.3s ease;
@@ -38,22 +49,14 @@
 .device a:hover{
     transform: none !important;
 }
-.iphone .blackout{
-    position: absolute;
-    top: 1.5vw;
-    left: 2.25vw;
-    z-index: -1;
-    background-color: black;
-    border-radius: 20px 20px 0px 0px;
-    width: 27vw;
-    height: 2.5vw;
-}
+
 .iphone .project-sceenshot{
     position: absolute;
     z-index: -1;
-    width: 100%;
-    margin-top: 1vw;
-    transform: scale(0.83);
+    width: 95%;
+    margin-left: 1vw;
+    border-radius: 50px 50px 40px 40px;
+    margin-top: 0.9vw;
 }
 .iphone-img{
     width: 100%;
@@ -64,7 +67,7 @@
     bottom: 0;
     content: "";
     z-index: -1;
-    left: 2.25vw;
+    left: 1vw;
     top: 1.5vw;
     position: absolute;
     right: 0;
@@ -72,9 +75,10 @@
 .iphone .gradient{
     position: absolute;
     background: linear-gradient(0deg, #030014 20%, #03001400);
-    width: 100%;
+    width: 99%;
     height: 10vw;
-    margin-top: -10vw;
+    margin-top: -8vw;
+    border-radius: 0 0 40px 40px;
 }
 .display .buttons{
     display: flex;
@@ -82,14 +86,16 @@
     position: relative;
     z-index: 1;
 }
-.macbook-btn, .iphone-btn{
+.macbook-btn, 
+.iphone-btn{
     width: 5vw;
     height: 5vw;
     border: 1px solid #d6e2e750;
     transition: background-color .5s ease;
     transition: .2s;
 }
-.macbook-btn:hover, .iphone-btn:hover{
+.macbook-btn:hover, 
+.iphone-btn:hover{
     cursor: pointer;
     border: 1px solid #d6e2e775 !important;
 }
@@ -112,29 +118,24 @@
     width: 35vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-left: 4vw;
+    margin-right: 2vw;
 }
 .project-title{
     font-family: 'Open sans';
     font-weight: 800;
-    font-size: 2.5rem;
-    background: linear-gradient(180deg, #d6e2e7 60%, #00a4ed);
-    -webkit-background-clip: text; 
-    background-clip: text;
-    color: transparent;
+    font-size: 2rem;
     letter-spacing: 0vw;
+    color: #32f5a9;
 }
-.project-title img{
-    position: absolute;
-    width: 10.5vw;
-    margin-top: -3.5vw;
-    margin-left: 1.5vw;
+.project-title span{
+    color: #d6e2e7;
 }
-.reflection{
-    transform: scaleY(-1);
-    opacity: 20%;
-    margin-top: -1.5vw;
+
+.project-title a:hover{
+    color: #ffffff;
 }
+
 .project-title .gradient{
     position: absolute;
     z-index: 1;
@@ -142,87 +143,64 @@
 }
 .info .tags{
     display: flex;
-    opacity: 30%;
     gap: .5vw;
     width: 28.35vw;
-    justify-content: center;
+    margin-top: 1vw;
 }
-.info .tags-row1{
-    margin-top: -1vw;
-    justify-content: flex-start;
-}
-.info .tags-row2{
-    margin-top: 0.5vw;
-    justify-content: flex-end;
-}
+
 .info .tags p{
-    border: 1px solid #d6e2e7;
     border-radius: 3px;
-    width: 9vw;
+    /* width: 10vw; */
+    padding-left: 0.75vw;
+    padding-right: 0.75vw;
     height: 2.5vw;
-    font-size: .9rem;
+    font-size: 0.6rem;
+    font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #32f5a9;
+    background-color: #ffffff15;
 }
-.info .description{
-    text-align: center;
-    font-size: 0.8rem;
+.info .description p{
+    /* text-align: center; */
+    font-weight: 300;
+    font-size: 0.9rem;
     opacity: 80%;
     margin-top: 2vw;
 }
-.info .buttons{
+.info .site-link,
+.info .github-link{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 0.8rem;
-    margin-top: 5vw;
-    gap: .6vw;
+    margin-top: 2vw;
 }
-.info .buttons .github-btn{
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    gap: 1vw;
+.info a{
+    color: #d6e2e7;
 }
-.info .buttons img{
-    width: 5.5vw;
-    filter: blur(2px);
-    opacity: .15;
+.info a span{
+    color: #32f5a9;
+    font-weight: 600;
 }
-.buttons p{
-    font-family: 'Open sans';
-    font-size: 0.5rem;
-    font-weight: 300;
+.info i{
+    font-size: 1.5rem;
 }
-.project .background{
-    position: absolute;
-    z-index: -1;
-    opacity: 80%;
+.info .arrow{
+    margin-right: -1.25vw;
 }
-.project .background .gradient{
-    position: absolute;
-    background-image: radial-gradient(#03001400, #030014 70%);
+.info .site-link .arrow1{
+    color: #32f5a9;
+    opacity: 0.25;
 }
-/* PROJECT-ODD*/
-.project-odd .background{
-    margin-left: -6vw;
-    margin-top: -12vw;
+.info .site-link .arrow2{
+    color: #32f5a9;
+    opacity: 0.5;
 }
-.project-odd .background img,
-.project-odd .background .gradient{
-    width: 40vw;
-    height: 30vw;
+.info .site-link .arrow3{
+    color: #32f5a9;
 }
-
-/* PROJECT-EVEN */
-.project-even .background{
-    margin-left: 40vw;
-    margin-top: -12vw;
+.info .github-link .arrow1{
+    opacity: 0.25;
 }
-.project-even .background img,
-.project-even .background .gradient{
-    width: 40vw;
-    height: 30vw;
+.info .github-link .arrow2{
+    opacity: 0.5;
 }
-

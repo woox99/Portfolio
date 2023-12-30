@@ -6,105 +6,158 @@
     padding: 0;
 }
 
-/* ########## PROJECTS SECTION ######### */
+/* ########## CONTACT SECTION ######### */
 
 .contact {
-    padding-top: 8vw;
-    height: calc(100vh - 8vw);
+    height: 100vh;
     transition: opacity 0.5s ease;
     display: flex;
-    justify-content: center;
 }
-.contact form{
-    position: relative;
-    background-image: linear-gradient(#211f2a, #030014);
-	border-radius: 0.5vw 5vw 0.5vw 5vw;
-    padding: 2vw 5vw 2vw 5vw;
+.farewell{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 10vw;
+    margin-left: 5vw;
     font-size: 0.8rem;
-    margin-bottom: 5vw;
 }
-/* Background gradient */
-.contact form:before{
+.farewell .arrows{
+    position: relative;
+    top: 0.5vw;
+    left: 6.25vw;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    transform: rotate(180deg);
+    width: 2vw;
+}
+.farewell .arrows i{
+    margin-bottom: -3.75vw;
+}
+.farewell .arrow1{
+    color: #00a4ed;
+    opacity: 0.25;
+}
+.farewell .arrow2{
+    color: #00a4ed;
+    opacity: 0.5;
+}
+.farewell .arrow3{
+    color: #00a4ed;
+}
+.farewell a{
+    color: #00a4ed !important;
+    font-weight: 600;
+}
+.farewell .copyright{
+    margin-top: 1vw;
+    letter-spacing: 0.1vw;
+    opacity: 0.5;
+}
+.farewell .big{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.contact img{
+    margin-top: 17vw;
+    width: 10vw;
+}
+.contact .gradient{
     position: absolute;
-    content: "";
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 0.5vw 5vw 0.5vw 5vw;
-    background-image: linear-gradient(-30deg, #030014 20%, #00a4ed);
-    height: calc(100% + 2px);
-    width: calc(100% + 2px);
-
+    right: 0;
+    background-image: linear-gradient(#030014 30%, #00a4ed30);
+    width: 40vw;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.contact form p{
-    margin-top: .75vw;
-    margin-left: 0.25vw;
+
+.contact form{
+    margin-top: 10vw;
+}
+.contact .title{
+    display: flex;
+    align-items: center;
+    font-family: 'Bungee', sans-serif;
+    color: #ffffff;
+    height: 3vw;
+    /* margin-bottom: 1vw; */
+    /* background-color: red; */
 }
 .contact .inputs{
+    position: relative;
     display: flex;
     flex-direction: column;
 }
 .contact input,
 .contact textarea{
-    background-color: #d6e2e745;
+    background-color: #00a4ed30;
     border: 1px solid #030014;
-    height: 3.25vw;
-    width: 25vw;
+    color: #ffffff;
+    height: 3vw;
+    width: 20vw;
+    font-weight: 300;
+    font-size: 0.8rem;
+    letter-spacing: 0.1vw;
+    border-radius: 4px;
     padding-left: 1vw;
     padding-right: 1vw;
-    font-weight: 400;
-    font-size: 0.8rem;
-    color: #d6e2e7;
-    letter-spacing: 0.1vw;
+    margin-top: 1vw;
+}
+input::placeholder,
+textarea::placeholder{
+    color: #ffffff; 
+    opacity: 0.8;
     font-family: 'open sans';
-    border-radius: 0.4vw 1vw 0.4vw 1vw;
+    font-weight: 300;
 }
 .contact input:focus,
 .contact textarea:focus {
     outline: none; 
-    background-color: #d6e2e765;
     border: 1px solid #00a4ed;
+    font-family: 'open sans';
 }
-
 .contact textarea{
-    height: 12vw;
+    height: 11vw;
     padding: 1vw;
     resize: none;
-    margin-bottom: 1vw;
 }
 .contact .buttonContainer{
     display: flex;
-    justify-content: end;
-}
-.contact button{
-    background-color: #03001400;
-    color: #d6e2e7;
-    font-family: 'Righteous';
-    border: none;
-    font-size: 1.0rem;
-    transition: 0.2s;
-    letter-spacing: 0.2vw;
-    width: 5vw; 
-    height: 2vw;
-    border: 0.15vw solid #00a4ed;
-    border-radius: 10vw;
-    height: 3vw;
-    width: 7vw;
-    cursor: pointer;
-}
-.contact button:hover{
-    font-size: 1.05rem;
-    color: white;
-}
-.backToTop{
-    text-align: center;
 }
 .contact a{
-    color: #00a4ed;
-    padding-bottom: 1vw;
+    color: #d6e2e7;
 }
-
+.contact a:hover{
+    color: #ffffff;
+}
+.contact i{
+    position: relative;
+    left: 0;
+    font-size: 1.75rem;
+    margin-top: 2vw;
+    margin-right: 1vw;
+}
+.contact button{
+    position: absolute;
+    right: 0;
+    justify-self: end;
+    background-color: #00a4ed30;
+    color: #ffffff;
+    margin-top: 2vw;
+    letter-spacing: 0.2vw;
+    border: 0.1px solid #00a4ed;
+    border-radius: 4px;
+    height: 2.5vw;
+    width: 7vw;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.contact button:hover{
+    background-color: #00a4ed80;
+}
 
 
 

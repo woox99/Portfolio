@@ -23,10 +23,6 @@ function downloadResume() {
 }
 
 
-
-
-
-
 // ########## SCROLL TO SECTION #########
 document.addEventListener("DOMContentLoaded", function () {
     // Add smooth scrolling behavior to links with the "smooth-scroll" class
@@ -49,6 +45,46 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// ##### NAV BAR STICK SCROLL EFFECT #####
+const stickNavBar = () => {
+    const navBar = document.querySelector('.nav')
+    const mainContent = document.querySelector('.main-content')
+    const navBarY = navBar.getBoundingClientRect().top;
+    const mainContentY = mainContent.getBoundingClientRect().top;
+
+    console.log(navBarY)
+    if(navBarY <= 0){
+        navBar.style.position = 'fixed';
+        navBar.style.top = '0';
+        navBar.style.bottom = 'unset';
+        navBar.style.background = 'linear-gradient(180deg, #030014 40%, #03001400)';
+    }
+    console.log(mainContentY - navBarY )
+    if(mainContentY - navBarY > 71){
+        navBar.style.position = 'absolute';
+        navBar.style.top = 'unset';
+        navBar.style.bottom = '0';
+        navBar.style.background = 'none';
+    }
+
+    // const navBar = document.querySelector('.nav')
+    // const navBarY = navBar.getBoundingClientRect().top;
+    // const navBarYVW = navBarY / window.innerWidth * 100;
+    // const mainContent = document.querySelector('.main-content')
+    // const mainContentY = mainContent.getBoundingClientRect().top;
+    // const mainContentYVW = mainContentY / window.innerWidth * 100;
+    // if(navBarYVW <= 0){
+    //     navBar.style.position = 'fixed';
+    //     navBar.style.top = '0';
+    //     navBar.style.background = 'linear-gradient(180deg, #030014 40%, #03001400)';
+    // }
+    // if(mainContentYVW - navBarYVW >= 7.1){
+    //     navBar.style.position = 'absolute';
+    //     navBar.style.top = 'unset';
+    //     navBar.style.bottom = '0';
+    //     navBar.style.background = 'none';
+    // }
+}
 
 
 // ########## SLIDER #########
@@ -68,7 +104,9 @@ const calculateSlider = (totalHeight, viewWidth, viewHeight) => {
 
 // Listen for the scroll event on the window
 window.addEventListener("scroll", () => {
+    // Calculates the new height of scroll bar
     calculateSlider(document.documentElement.scrollHeight, window.innerWidth, window.innerHeight);
+    stickNavBar();
 });
 
 // Listen for the screen resize event on the window
@@ -111,15 +149,15 @@ function startTextEffect(title) {
         }
         if (titles[key].dataset.value != 'intro') {
             // Unhighlight all tabs
-            tabs[titles[key].dataset.value].style.color = '#d6e2e7';
+            tabs[titles[key].dataset.value].style.color = '#ffffff';
             tabs[titles[key].dataset.value].style.transform = 'scale(1.0)';
         }
     }
 
     // Highlight the section tab
-    const highlightedTab = title.dataset.value;
-    tabs[highlightedTab].style.color = '#ffffff';
-    tabs[highlightedTab].style.transform = 'scale(1.1)';
+    // const highlightedTab = title.dataset.value;
+    // tabs[highlightedTab].style.color = '#32f5a9';
+    // tabs[highlightedTab].style.transform = 'scale(1.1)';
 
     // Display the section title
     title.style.display = 'block';
@@ -163,8 +201,8 @@ const introObserver = new IntersectionObserver((entries) => {
 
         }, 0)
         // Unhighlight tab
-        tabs['projects'].style.color = '#d6e2e7'
-        tabs['projects'].style.transform = 'scale(1.0)'
+        tabs['projects'].style.color = '#ffffff'
+        // tabs['projects'].style.transform = 'scale(1.0)'
     }
     else {
         setTimeout(() => {
@@ -194,6 +232,9 @@ const projectsObserver = new IntersectionObserver((entries) => {
         setTimeout(() => {
             entry.target.style.opacity = '1';
         }, 0)
+
+        // Change tab color
+        tabs['projects'].style.color = '#32f5a9'
     }
     else {
         setTimeout(() => {
@@ -221,6 +262,9 @@ const toolboxObserver = new IntersectionObserver((entries) => {
         setTimeout(() => {
             entry.target.style.opacity = '1';
         }, 0)
+
+        // Change tab color
+        tabs['toolbox'].style.color = '#00a4ed'
     }
     else {
         setTimeout(() => {
@@ -245,6 +289,9 @@ const contactObserver = new IntersectionObserver((entries) => {
         const title = titles[section];
         startTextEffect(title);
         entry.target.style.opacity = '1';
+
+        // Change tab color
+        tabs['contact'].style.color = '#00a4ed'
     }
     else {
         setTimeout(() => {

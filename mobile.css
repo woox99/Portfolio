@@ -6,28 +6,33 @@
     padding: 0;
 }
 
+
+
+
 /* ########## MOBILE ######### */
 @media (max-width: 600px) {
     html {
         font-size: 4vw;
     }
-
+    
     body {
         letter-spacing: 0.65vw;
     }
+    
+    .main-content {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+
+    .mobile-hide {
+        display: none !important;
+    }
+
 
     /* ########## BAR AND SLIDER ######### */
     .nav {
-        height: 20vw;
-        background: linear-gradient(180deg, #030014 30%, #03001400);
-        font-size: 1.2rem;
-    }
-
-    .nav .links {
-        /* gap: 10vw; */
-        margin-top: 4vw;
-        margin-right: 3vw;
-        font-size: 1rem;
+        display: none;
     }
 
     .nav button,
@@ -36,332 +41,219 @@
     }
 
     .sectionTitle {
-        font-size: 3.5rem;
-        margin-bottom: 6vw;
+        display: none !important;
     }
 
-    .slider img{
-        width: 5vw;
+    .slider img {
+        width: 6vw;
         margin-top: 2vw !important;
         margin-bottom: 2vw !important;
     }
-    .slider .github,
-    .slider .linkedin {
-        display: none;
-    }
+
     /* ########## INTRO ######### */
-    /* .intro img {
-        height: 100vh !important;
-    } */
+    .intro .gradient {
+        width: 100vw !important;
+        z-index: -1;
+    }
+
+    .intro img {
+        width: 50vw !important;
+        right: 20vw !important;
+        top: 8vw !important;
+    }
 
     .intro .title {
-        top: 20vh !important;
+        top: 35vh !important;
+        margin-right: 4vw;
     }
+
     .intro h1 {
-        font-size: 1.5rem !important;
-        /* text-align: center; */
+        font-size: 1.45rem !important;
+        text-align: center;
     }
-    .intro .field{ 
-        padding-top: -5vw !important;
+
+    .intro .field {
+        margin-top: -8vw !important;
+        margin-top: 0 !important;
     }
-    .intro .description{
-        font-size: 0.8rem !important;
-        /* text-align: center; */
+
+    .intro .description {
+        font-size: 0.9rem !important;
+        text-align: left !important;
         width: unset !important;
-        /* background-color: red; */
-    }
-    .intro .links{
-        /* display: flex; */
-        /* justify-content: center; */
         margin-top: 5vw !important;
-        gap: 5vw;
-    }
-    .intro img{
-        width: 7vw !important;
     }
 
-    /* .intro .tags {
-        display: block !important;
-        position: absolute;
-        font-size: 1.25rem;
-        top: 75vh;
-        left: 10vw;
-        opacity: 50%;
-        transition: 0.5s;
-    } */
+    .intro .list {
+        margin-top: 5vw !important;
+    }
 
-    /* .intro .satellite1{
-        width: 45vw !important;
-        height: 45vw !important;
+    .intro .links {
+        margin-top: 10vw !important;
+        text-align: center;
     }
-    .intro .satellite2{
-        width: 12vw !important;
-        height: 8vw !important;
+
+    .intro .links i {
+        font-size: 3rem !important;
+        margin-right: 2vw !important;
+        margin-left: 2vw !important;
     }
-    .intro img{
-        margin-top: 105vw;
-        margin-left: -25vw;
-    } */
-    /* When screen width AND height is small */
-    @media (max-height: 400px) {
-        .intro .tags {
-            opacity: 0;
-        }
+
+    .intro .arrows {
+        bottom: 4vw;
+        left: 45vw !important;
+    }
+
+    .intro .arrows i {
+        margin-top: -8vw !important;
     }
 
     /* ########## PROJECTS ######### */
+    .project-even,
+    .project-odd {
+        background-image: none !important;
+        min-height: 100vh !important;
+    }
+
     .project {
-        padding-top: 30vw !important;
-        padding-bottom: 27vw !important;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .project-title-mobile {
-        display: block !important;
-        display: flex !important;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 5vw;
-    }
-
-    .project-title {
-        margin-bottom: -4vw;
-    }
-
-    .info .project-title {
-        display: none;
-    }
-
-    .project-title img {
-        width: 20vw !important;
-        width: calc(10.5vw * 2.67) !important;
-        margin-left: 4vw !important;
-        margin-top: -9.5vw !important;
-    }
-
-    .project .background {
-        display: none;
-    }
-
-    .background-mobile {
-        display: block !important;
-        z-index: -1;
-        margin-top: 30vw !important;
-        margin-left: -0vw !important;
-    }
-
-    .background-mobile {
-        transform: scale(2);
-    }
-
-    .background-mobile {
-        transform: scale(2);
-        z-index: 1;
+        position: relative !important;
+        border-radius: 0 !important;
+        background-image: linear-gradient(0deg, #030014, #32f5a910) !important;
     }
 
     .project .display {
-        width: 65vw;
+        position: absolute !important;
+        bottom: 15vh !important;
+        right: 23vw !important;
+        transform: scale(1.7);
     }
 
-    .project .blackout{
-        margin-left: 2vw !important;
-        width: 38vw !important;
-        height: 10vw !important;
+    .project .info {
+        width: 100%;
+        margin-left: 15vw !important;
+        margin-right: 4vw !important;
+        margin-top: 5vw !important;
     }
 
-    .display .buttons {
-        margin-top: 16vw;
+    .project .tags {
+        width: unset !important;
+        gap: 1vw !important;
+        margin-top: 5vw !important;
+        margin-bottom: 5vw !important;
     }
 
-    .macbook-btn,
-    .iphone-btn {
-        width: 12.5vw !important;
-        height: 12.5vw !important;
+    .project .tags p {
+        padding-left: 2.5vw !important;
+        padding-right: 2.5vw !important;
+        height: 5vw !important;
+        border-radius: 1px !important;
     }
 
-    .display .buttons img {
-        width: 10vw !important;
-        height: 10vw !important;
+    .project .description p {
+        margin-bottom: 5vw !important;
     }
 
-    .info {
-        width: 65vw !important;
+    .project .arrow {
+        margin-right: -3.8vw !important;
     }
 
-    .info .tags {
-        width: 100% !important;
-        margin-top: 5vw;
+    .project .github-link {
+        margin-top: 6vw !important;
     }
 
-    .info .tags p {
-        width: 22vw !important;
-        height: 6vw !important;
+    .iphone .project-sceenshot {
+        border-radius: 20px 20px 20px 20px !important;
     }
 
-    .info .description {
-        margin-top: 4vw !important;
+    .iphone .gradient {
+        border-radius: 0 0 20px 20px !important;
     }
 
-    .info .buttons {
-        margin-top: 15vw !important;
-        font-size: 1.5rem;
-        gap: 2vw !important;
-    }
-
-    .info .buttons img {
-        width: 15vw !important;
-        opacity: 0.3 !important;
-    }
-
-    .buttons p {
-        font: .45rem;
-    }
-
-    /* PROJECT-EVEN */
     .project-even {
         flex-wrap: wrap-reverse;
     }
 
-    .project-even .display .buttons {
-        margin-bottom: 5vw;
-    }
-
-    /* ########## TOOLBOX ######### */
-    .toolbox .desktop {
-        display: none;
-    }
-
-    .toolbox .mobile {
-        display: block !important;
-    }
-
-    .toolbox {
-        padding-top: 17vw !important;
-        padding-left: 5vw;
-        min-height: 100vh;
-    }
-
-    .toolbox .cards {
-        margin-top: 0 !important;
-        margin-top: -6vw !important;
-    }
-
-    .toolbox .card {
-        width: 33vw !important;
-        height: 50vw !important;
-    }
-
-    .toolbox .card-1,
-    .toolbox .card-4 {
-        margin-top: 14vw;
-    }
-
-
-    .toolbox .card-3,
-    .toolbox .card-4,
-    .toolbox .card-3 .content-wrapper,
-    .toolbox .card-4 .content-wrapper {
-        transform: none !important;
-    }
-
-    .toolbox .row1,
-    .toolbox .row2 {
-        margin: 0 !important;
-        display: block !important;
-    }
-
-    .toolbox .row2 {
-        margin-top: -14vw !important;
-    }
-
-    .toolbox .top-row {
-        text-align: end;
-    }
-
-    .toolbox .row1 img,
-    .toolbox .row2 img {
-        transform: scale(1.75);
-        transform-origin: left;
-        margin-top: 3vw;
-    }
-
-    .toolbox .row2 img {
-        margin-top: 3.4vw;
-    }
-
-    .toolbox .top-row img {
-        transform-origin: right;
-    }
-
-    .toolbox .mysql {
-        margin-right: 18vw;
-    }
-
-    .toolbox .node {
-        margin-left: 15vw;
-    }
-
-    .toolbox .mongo {
-        margin-right: 14vw !important;
-    }
-
-    .toolbox .react {
-        margin-left: 12vw;
-    }
-
-    .toolbox .card img {
-        height: 9vw !important;
-        margin-top: 3vw !important;
-    }
-
-    .toolbox .title {
-        margin-top: 2vw !important;
-    }
-
-    .toolbox .list {
-        margin-top: 3vw !important;
+    .project-even .description {
+        margin-top: -10vw !important;
     }
 
 
     /* ########## CONTACT ######### */
-    .contact{
-        /* background-color: wheat; */
-        height: 70vh !important;
+    .contact {
+        position: relative !important;
     }
-    .contact form{
-        position: relative;
-        width: 60vw;
-        padding-top: 5vw !important;
-        /* background-color: red; */
+
+    .farewell {
+        position: absolute !important;
+        z-index: 1;
+        top: 10vw !important;
+        right: 15vw !important;
     }
-    .contact form p{
-        font-size: 1rem !important;
+    .farewell i {
+        font-size: 3rem !important;
+        margin-bottom: -10vw !important;
+    }
+
+    .contact .gradient {
+        width: 100% !important;
+    }
+
+    .contact form {
+        position: absolute !important;
+        bottom: 20vw !important;
+        width: 80%;
+        margin-left: 4vw;
+    }
+
+    .contact .title {
+        font-size: 2rem !important;
+        margin-bottom: 8vw !important;
     }
     .contact input,
     .contact textarea{
-        width: 59vw !important;
+        padding-left: 3vw !important;
     }
-    .contact input{
-        height: 8vw !important;
+
+    .contact input {
+        width: 95% !important;
+        height: 11vw !important;
+        margin-bottom: 2vw !important;
     }
-    .contact textarea{
-        height: 40vw !important;
-    }
-    .contact p{
-        display: block !important;
-        margin-left: 2vw;
-        margin-top: 5vw;
-        font-size: 1.5rem;
-    }
-    .contact button{
-        margin-top: 2vw !important;
+
+    .contact textarea {
+        width: 95% !important;
+        height: 26vh !important;
         font-size: 1rem !important;
-        height: 7vw !important;
-        width: 14vw !important;
     }
-    /* .contact .title p{
-        margin-top: 13vw !important;
-    } */
+
+    input::placeholder,
+    textarea::placeholder {
+        font-size: 1rem;
+    }
+
+    .contact button {
+        height: 10vw !important;
+        width: 30% !important;
+    }
+
+    .contact .buttonContainer {
+        margin-top: 3vw !important;
+    }
+
+    .contact form i {
+        font-size: 2.5rem !important;
+        margin-right: 3vw;
+    }
+}
+
+/* ########## WHEN ASPECT RATIO IS ROUGHLY SQUARE ######### */
+@media (max-aspect-ratio: 1) {
+    @media (min-aspect-ratio: 0.6) {
+        .hide-when-square {
+            display: none !important;
+        }
+        .intro .title{
+            top: 5.5vw !important;
+        }
+    }
 }

@@ -39,5 +39,3 @@ const showMacbook = (projectNum) => {
     iphoneBtn[projectNum - 1].style.backgroundColor = '#d6e2e700';
     iphoneBtn[projectNum - 1].style.border = '1px solid #d6e2e750';
 }
-
- 

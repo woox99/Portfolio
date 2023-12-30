@@ -12,7 +12,96 @@
     padding-top: 8vw;
     padding-right: 2vw;
     transition: opacity 0.5s ease;
-    /* background-color: wheat; */
+}
+
+.toolbox .cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.toolbox .card {
+    width: 17vw;
+    border-radius: 4px;
+    padding: 1px;
+    height: 23vw;
+}
+
+.toolbox .card-1,
+.toolbox .card-4{
+    background-image: linear-gradient(-30deg, #030014 30%, #00a4ed);
+}
+
+.toolbox .card-2,
+.toolbox .card-3{
+    background-image: linear-gradient(-8deg, #030014 55%, #00a4ed);
+}
+
+.toolbox .card-3,
+.toolbox .card-4{
+    transform: scaleX(-1);
+}
+
+.toolbox .card-3 .content-wrapper,
+.toolbox .card-4 .content-wrapper {
+    transform: scaleX(-1);
+}
+.toolbox .content-wrapper {
+    position: relative;
+    background-image: linear-gradient(0deg, #03001400, #030014);
+    height: 100%;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Glare on card */
+.toolbox .content-wrapper:after {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: radial-gradient(circle at right bottom, transparent 75%, rgba(255, 255, 255, 0.35) 80%, transparent);
+    border-radius: 4px;
+}
+.toolbox .card img{
+    height: 5vw;
+    margin-top: 1.5vw;
+    opacity: 0.3;
+}
+.toolbox i{
+    font-size: 2rem;
+    margin-top: 2vw;
+    color: #1e3050;
+}
+.toolbox .title{
+    font-family: 'Bungee', sans-serif;
+    font-size: 1.0rem;
+    color: white ;
+    margin-top: 1vw;
+    opacity: 0.8;
+}
+.toolbox .list{
+    font-size: .8rem;
+    opacity: 0.8;
+    margin-top: 1.5vw;
+}
+.toolbox .list p{
+    text-align: left;
+    margin-top: 0.25vw;
+}
+.card-1 .list p{
+    margin-left: 3vw;
+}
+.card-2 .list p{
+    margin-left: 3.5vw;
+}
+.card-3 .list p{
+    margin-left: 3vw;
+}
+.card-4 .list p{
+    margin-left: 4vw;
 }
 
 .toolbox .row1,
@@ -20,6 +109,7 @@
     display: flex;
     align-items: center;
     gap: 6vw;
+    transform: scale(0.75);
 }
 
 .toolbox .row1 {
@@ -70,88 +160,5 @@
 
 .toolbox .mui {
     opacity: 1.0 !important;
-}
-
-.toolbox .cards {
-    display: flex;
-    margin-top: 4vw;
-    justify-content: space-between;
-}
-
-.toolbox .card {
-    width: 17vw;
-    border-radius: 4px;
-    padding: 1px;
-    height: 23vw;
-}
-
-.toolbox .card-1,
-.toolbox .card-4{
-    background-image: linear-gradient(-30deg, #030014 30%, #00a4ed);
-}
-
-.toolbox .card-2,
-.toolbox .card-3{
-    background-image: linear-gradient(-8deg, #030014 55%, #00a4ed);
-}
-
-.toolbox .card-3,
-.toolbox .card-4{
-    transform: scaleX(-1);
-}
-
-.toolbox .card-3 .content-wrapper,
-.toolbox .card-4 .content-wrapper {
-    transform: scaleX(-1);
-}
-.toolbox .content-wrapper {
-    position: relative;
-    background-image: linear-gradient(0deg, #03001400, #030014);
-    height: 100%;
-    border-radius: 4px;
-    text-align: center;
-}
-.toolbox .img-gradient:after{
-    position: absolute;
-    content: "";
-    z-index: 1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-image: linear-gradient(0deg, #03001400, #03001490);
-    border-radius: 4px;
-    height: 7vw;
-}
-.toolbox .content-wrapper:after {
-    /* Glare on card */
-    position: absolute;
-    content: "";
-    z-index: 1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: radial-gradient(circle at right bottom, transparent 75%, rgba(255, 255, 255, 0.35) 80%, transparent);
-    border-radius: 4px;
-}
-.toolbox .card img{
-    height: 5vw;
-    margin-top: 1.5vw;
-}
-.toolbox .title{
-    font-family: 'Bungee', sans-serif;
-    font-size: 1.0rem;
-    color: white ;
-    margin-top: 1vw;
-    opacity: 0.8;
-}
-.toolbox .list{
-    font-size: .8rem;
-    opacity: 0.8;
-    margin-top: 1.5vw;
-}
-.toolbox .list p{
-    margin-top: 0.25vw;
 }
 

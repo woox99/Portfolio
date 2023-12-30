@@ -10,51 +10,93 @@
 .intro{
     width: 100%;
     height: 100vh;
-    /* overflow: hidden; */
-    /* background-color: wheat; */
     transition: 0.5s ease;
 }
-/* .intro .satellite1{
-    overflow-x: scroll;
-    position: absolute;
-    left: 60vw;
-    top: 22vw;
-    width: 40vw;
-    transform-origin:top left;
-}
-.intro .satellite2{
-    overflow-x: scroll;
-    position: absolute;
-    left: 48vw;
-    top: 20vw;
-    width: 12vw;
-    transform-origin:top right;
-} */
 .intro .title{
     position: absolute;
-    top: 6vw;
+    top: 5.5vw;
     left: 10vw;
-    font-family: 'Bungee', sans-serif;
-    /* background-color: red; */
 }
 .intro .name{
-    color: #c300ff;
+    display: flex;
+    align-items: center;
+    font-family: 'Bungee', sans-serif;
     font-size: 2.5rem;
+    color: #c300ff;
+    height: 6vw;
 }
 .intro .field{
-    margin-top: -5vw;
+    display: flex;
+    align-items: center;
+    font-family: 'Bungee', sans-serif;
+    margin-top: -2vw;
     font-size: 2.5rem;
+    height: 6vw;
 }
 .intro .description{
     font-family: 'Open Sans', sans-serif;
-    width: 46vw;
+    width: 47vw;
+    font-size: .81rem;
+    margin-top: 1vw;
+}
+.intro .list{
     font-size: .91rem;
-    /* background-color: red; */
+    margin-top: 2vw;
 }
 .intro .links{
-    margin-top: 4vw;
+    margin-top: 3vw;
 }
-.intro img{
-    width: 2.25vw;
+.intro .links i{
+    font-size: 1.75rem;
     margin-right: 1vw;
+}
+.intro a{
+    color: #d6e2e7;
+}
+.intro a:hover{
+    color: #ffffff;
+}
+.intro .gradient{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: linear-gradient(#c300ff, #030014);
+    opacity: 0.18;
+    width: 40vw;
+    height: 100vh;
+}
+
+.intro img{
+    transform: scaleX(-1);
+    position: absolute;
+    top: 15vw;
+    right: 14vw;
+    width: 10vw;
+}
+.intro .arrows{
+    position: absolute;
+    bottom: 0vw;
+    left: 52vw;
+    width: 5vw;
+    height: 10vw;
+
+}
+.intro .arrows a{
+    display: flex;
+    flex-direction: column;
+}
+.intro .arrows i{
+font-size: 3rem;
+margin-top: -3vw;
+}
+.intro .arrow1{
+    color: #c300ff;
+    opacity: 0.25;
+}
+.intro .arrow2{
+    color: #c300ff;
+    opacity: 0.5;
+}
+.intro .arrow3{
+    color: #c300ff;
 }
