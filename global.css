@@ -159,7 +159,7 @@ a{
     position: fixed;
     left: 4.5vw;
     bottom: 3vw;
-    z-index: 100;
+    z-index: -1;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     height: calc(100vh - 9vw);

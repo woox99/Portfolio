@@ -69,9 +69,9 @@
 .intro img{
     transform: scaleX(-1);
     position: absolute;
-    top: 15vw;
-    right: 14vw;
-    width: 10vw;
+    top: 14vw;
+    right: 12vw;
+    width: 15vw;
 }
 .intro .arrows{
     position: absolute;
@@ -79,16 +79,17 @@
     left: 52vw;
     width: 5vw;
     height: 10vw;
-
 }
 .intro .arrows a{
     display: flex;
     flex-direction: column;
 }
 .intro .arrows i{
-font-size: 3rem;
-margin-top: -3vw;
+    font-size: 3rem;
+    margin-top: -3vw;
+    transition: 0.5s ease;
 }
+
 .intro .arrow1{
     color: #c300ff;
     opacity: 0.25;

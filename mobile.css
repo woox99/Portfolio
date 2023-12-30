@@ -123,7 +123,7 @@
 
     .project .display {
         position: absolute !important;
-        bottom: 15vh !important;
+        bottom: 20vw !important;
         right: 23vw !important;
         transform: scale(1.7);
     }

@@ -18,8 +18,9 @@
     flex-direction: column;
     align-items: center; 
     margin-top: 10vw;
-    margin-left: 5vw;
+    margin-left: 10vw;
     font-size: 0.8rem;
+    /* background-color: red; */
 }
 .farewell .arrows{
     position: relative;
@@ -50,17 +51,16 @@
     font-weight: 600;
 }
 .farewell .copyright{
-    margin-top: 1vw;
     letter-spacing: 0.1vw;
     opacity: 0.5;
 }
-.farewell .big{
+/* .farewell .big{
     font-size: 1.2rem;
     font-weight: 600;
-}
+} */
 .contact img{
-    margin-top: 17vw;
-    width: 10vw;
+    margin-top: 22vw;
+    width: 7vw;
 }
 .contact .gradient{
     position: absolute;
