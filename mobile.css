@@ -123,7 +123,7 @@
 
     .project .display {
         position: absolute !important;
-        bottom: 20vw !important;
+        bottom: 15lvh !important;
         right: 23vw !important;
         transform: scale(1.7);
     }
@@ -248,7 +248,7 @@
 
 /* ########## WHEN ASPECT RATIO IS ROUGHLY SQUARE ######### */
 @media (max-aspect-ratio: 1) {
-    @media (min-aspect-ratio: 0.6) {
+    @media (min-aspect-ratio: 0.55) {
         .hide-when-square {
             display: none !important;
         }
