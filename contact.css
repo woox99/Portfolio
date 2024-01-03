@@ -9,7 +9,7 @@
 /* ########## CONTACT SECTION ######### */
 
 .contact {
-    height: 100vh;
+    height: 100lvh;
     transition: opacity 0.5s ease;
     display: flex;
 }
@@ -67,7 +67,7 @@
     right: 0;
     background-image: linear-gradient(#030014 30%, #00a4ed30);
     width: 40vw;
-    height: 100vh; 
+    height: 100lvh; 
     display: flex;
     flex-direction: column;
     justify-content: center;

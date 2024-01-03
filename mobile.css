@@ -63,7 +63,7 @@
     }
 
     .intro .title {
-        top: 35vh !important;
+        top: 35lvh !important;
         margin-right: 4vw;
     }
 
@@ -112,7 +112,7 @@
     .project-even,
     .project-odd {
         background-image: none !important;
-        min-height: 100vh !important;
+        min-height: 100lvh !important;
     }
 
     .project {
@@ -222,7 +222,7 @@
 
     .contact textarea {
         width: 95% !important;
-        height: 26vh !important;
+        height: 26lvh !important;
         font-size: 1rem !important;
     }
 

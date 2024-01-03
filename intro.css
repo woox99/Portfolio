@@ -9,7 +9,7 @@
 /* ########## INTRO SECTION ######### */
 .intro{
     width: 100%;
-    height: 100vh;
+    height: 100lvh;
     transition: 0.5s ease;
 }
 .intro .title{
@@ -63,7 +63,7 @@
     background-image: linear-gradient(#c300ff, #030014);
     opacity: 0.18;
     width: 40vw;
-    height: 100vh;
+    height: 100lvh;
 }
 
 .intro img{

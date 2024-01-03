@@ -147,7 +147,7 @@ a{
 .slider .bottom{
     background: linear-gradient(0deg, #00a4ed, #c300ff);
     width: 2px;
-    height: calc(100vh - 17vw);
+    height: calc(100lvh - 17vw);
 }
 .slider img{
     width: 3vw;
@@ -162,7 +162,7 @@ a{
     z-index: -1;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    height: calc(100vh - 9vw);
+    height: calc(100lvh - 9vw);
     opacity: 30%;
     font-size: 6rem;
     letter-spacing: 0.25vw;
