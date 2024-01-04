@@ -248,7 +248,7 @@
 
 /* ########## WHEN ASPECT RATIO IS ROUGHLY SQUARE ######### */
 @media (max-aspect-ratio: 1) {
-    @media (min-aspect-ratio: 0.55) {
+    @media (min-aspect-ratio: 0.6) {
         .hide-when-square {
             display: none !important;
         }
