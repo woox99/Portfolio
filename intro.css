@@ -53,13 +53,6 @@
     height: 100lvh;
 }
 
-/* .intro img{
-    transform: scaleX(-1);
-    position: absolute;
-    top: 14vw;
-    right: 12vw;
-    width: 15vw;
-} */
 .intro .arrows{
     position: absolute;
     bottom: 0vw;

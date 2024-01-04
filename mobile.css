@@ -67,16 +67,6 @@
         margin-right: 4vw;
     }
 
-    .intro h1 {
-        font-size: 1.45rem !important;
-        text-align: center;
-    }
-
-    .intro .field {
-        margin-top: -8vw !important;
-        margin-top: 0 !important;
-    }
-
     .intro .description {
         font-size: 2.25rem !important;
         text-align: left !important;
@@ -94,7 +84,7 @@
 
     .intro .links {
         margin-top: 15vw !important;
-        text-align: left;
+        text-align: left !important;
     }
 
     .intro .links i {
