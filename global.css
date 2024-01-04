@@ -150,7 +150,7 @@ a{
     height: calc(100lvh - 17vw);
 }
 .slider img{
-    width: 3vw;
+    width: 3.5vw;
     margin-top: 0.5vw;
     margin-bottom: 0.5vw;
 }

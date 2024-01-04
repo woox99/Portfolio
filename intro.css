@@ -17,26 +17,13 @@
     top: 5.5vw;
     left: 10vw;
 }
-.intro .name{
-    display: flex;
-    align-items: center;
-    font-family: 'Bungee', sans-serif;
-    font-size: 2.5rem;
-    color: #c300ff;
-    height: 6vw;
-}
-.intro .field{
-    display: flex;
-    align-items: center;
-    font-family: 'Bungee', sans-serif;
-    margin-top: -2vw;
-    font-size: 2.5rem;
-    height: 6vw;
-}
+
 .intro .description{
     font-family: 'Open Sans', sans-serif;
     width: 47vw;
-    font-size: .81rem;
+    letter-spacing: -.05vw;
+    font-size: 2.2rem;
+    font-weight: 300;
     margin-top: 1vw;
 }
 .intro .list{
@@ -66,13 +53,13 @@
     height: 100lvh;
 }
 
-.intro img{
+/* .intro img{
     transform: scaleX(-1);
     position: absolute;
     top: 14vw;
     right: 12vw;
     width: 15vw;
-}
+} */
 .intro .arrows{
     position: absolute;
     bottom: 0vw;

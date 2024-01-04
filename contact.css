@@ -20,7 +20,6 @@
     margin-top: 10vw;
     margin-left: 10vw;
     font-size: 0.8rem;
-    /* background-color: red; */
 }
 .farewell .arrows{
     position: relative;
@@ -53,14 +52,7 @@
 .farewell .copyright{
     letter-spacing: 0.1vw;
     opacity: 0.5;
-}
-/* .farewell .big{
-    font-size: 1.2rem;
-    font-weight: 600;
-} */
-.contact img{
-    margin-top: 24vw;
-    width: 7vw;
+    margin-top: 30vw;
 }
 .contact .gradient{
     position: absolute;

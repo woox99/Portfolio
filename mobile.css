@@ -78,19 +78,23 @@
     }
 
     .intro .description {
-        font-size: 0.9rem !important;
+        font-size: 2.25rem !important;
         text-align: left !important;
         width: unset !important;
         margin-top: 5vw !important;
+        font-weight: 600 !important;
     }
-
+    .intro .description span{
+        display: none !important;
+    }
     .intro .list {
-        margin-top: 5vw !important;
+        margin-top: 15vw !important;
+        text-align: left !important;
     }
 
     .intro .links {
-        margin-top: 10vw !important;
-        text-align: center;
+        margin-top: 15vw !important;
+        text-align: left;
     }
 
     .intro .links i {
@@ -100,8 +104,8 @@
     }
 
     .intro .arrows {
-        bottom: 4vw;
-        left: 45vw !important;
+        bottom: 10vw !important;
+        left: 30vw !important;
     }
 
     .intro .arrows i {
@@ -151,6 +155,9 @@
 
     .project .description p {
         margin-bottom: 5vw !important;
+    }
+    .project .info .header{
+        font-size: 1.6rem !important;
     }
 
     .project .arrow {
