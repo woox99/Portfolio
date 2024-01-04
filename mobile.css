@@ -93,14 +93,6 @@
         margin-left: 2vw !important;
     }
 
-    .intro .arrows {
-        bottom: 10vw !important;
-        left: 30vw !important;
-    }
-
-    .intro .arrows i {
-        margin-top: -8vw !important;
-    }
 
     /* ########## PROJECTS ######### */
     .project-even,
