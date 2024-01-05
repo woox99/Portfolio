@@ -55,7 +55,8 @@
     z-index: -1;
     width: 95%;
     margin-left: 1vw;
-    border-radius: 50px 50px 40px 40px;
+    /* border-radius: 50px 50px 40px 40px; */
+    border-radius: 5vw;
     margin-top: 0.9vw;
 }
 .iphone-img{
