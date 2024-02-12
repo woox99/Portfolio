@@ -19,16 +19,24 @@
 }
 
 .intro .description{
+    position: relative;
+    z-index: 10;
     font-family: 'Open Sans', sans-serif;
     width: 47vw;
     letter-spacing: -.05vw;
-    font-size: 2.2rem;
-    font-weight: 300;
+    font-size: 3rem;
+    font-weight: 700;
     margin-top: 1vw;
+    width: 74vw;
+    line-height: 5vw;
+    opacity: 0.9;
+    /* background-color: red; */
 }
 .intro .list{
     font-size: .91rem;
     margin-top: 2vw;
+    opacity: 0.5;
+    font-weight: 600;
 }
 .intro .links{
     margin-top: 3vw;
@@ -36,6 +44,7 @@
 .intro .links i{
     font-size: 1.75rem;
     margin-right: 1vw;
+    opacity: 0.9;
 }
 .intro a{
     color: #d6e2e7;
@@ -48,7 +57,7 @@
     top: 0;
     right: 0;
     background-image: linear-gradient(#c300ff, #030014);
-    opacity: 0.18;
+    opacity: 0.10;
     width: 40vw;
     height: 100lvh;
 }

@@ -172,6 +172,7 @@
     font-size: 1.8rem !important;
     letter-spacing: -.05vw;
     font-weight: 600 !important;
+    line-height: 3.25vw;
 }
 .info .site-link,
 .info .github-link{

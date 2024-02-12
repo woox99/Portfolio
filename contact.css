@@ -14,6 +14,7 @@
     display: flex;
 }
 .farewell{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -22,9 +23,8 @@
     font-size: 0.8rem;
 }
 .farewell .arrows{
-    position: relative;
-    top: 0.5vw;
-    left: 6.25vw;
+    position: absolute;
+    bottom: 10vw;
     display: flex;
     flex-direction: column;
     font-size: 1.25rem;
