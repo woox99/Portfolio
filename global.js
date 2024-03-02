@@ -242,7 +242,8 @@ const projectsObserver = new IntersectionObserver((entries) => {
         }, 0)
     }
 }, {
-    threshold: .17,
+    // threshold = percent of section within the screen to trigger execution
+    threshold: .13,
 });
 
 // Start observing projects section
